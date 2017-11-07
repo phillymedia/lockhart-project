@@ -1,0 +1,7 @@
+node_modules
+.tmp
+finals
+*.log
+.idea
+dist
+.DS_Store

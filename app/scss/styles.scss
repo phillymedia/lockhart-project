@@ -1,0 +1,33 @@
+@import 'longform-styles';
+@import 'philly-styles/values';
+
+.header {
+    position: absolute !important;
+}
+.subscribetoday__wrap {
+    position: absolute !important;
+}
+
+.heroImage {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.byline-section {
+    margin: 50px 0 100px;
+}
+
+.subHead {
+    font-weight: 100;
+    font-family: $philly-sans;
+    font-size: 22px;
+}
+.footerNav {
+    padding: 100px;
+}

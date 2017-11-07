@@ -1,0 +1,31 @@
+{% extends "pagetemplate.html" %} {% block styles %}
+<!--removeIf(production)-->
+<!--build:css min-files/styles.min.css-->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/pages/page5.css">
+<!--endbuild-->
+<!--endRemoveIf(production)-->
+{% endblock %}
+
+
+{% block headercontent %}
+
+<div class="headerIntro">
+    <div class="heroImage"><img src="./assets/murray_justice_fpo.jpg" alt=""></div>
+</div>
+<h1>Undercover Gangster Part 5: The Reckoning</h1>
+
+{% endblock %}
+
+{% block bodycontent %}
+{% include "../nj-templates/bodytext/page5.html" %}
+{% endblock %}
+
+{% block jsfile %}
+<!--removeIf(production)-->
+<!--build:js min-files/main.min.js -->
+<script src="js/pages/page5.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+<!--endRemoveIf(production)-->
+{% endblock %}
