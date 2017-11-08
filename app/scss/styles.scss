@@ -19,15 +19,100 @@
     }
 }
 
-.byline-section {
-    margin: 50px 0 100px;
-}
+
 
 .subHead {
     font-weight: 100;
-    font-family: $philly-sans;
-    font-size: 22px;
+    font-family: 'Teko', $philly-serif;
+    font-size: 37px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 .footerNav {
     padding: 100px;
+}
+
+.headerIntro {
+    position: relative;
+    display: block;
+    height: 100%;
+    @include display-flex;
+
+    .heroText {
+        order: 1;
+        @include flex(1 1 30%);
+        padding: 100px 0 0 20px;
+        @include display-flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: flex-start;
+    }
+
+    .heroImage {
+        margin-top: -150px;
+        margin-left: auto;
+        order: 2;
+        @include flex(1 1 60%);
+
+    }
+
+    .title {
+        font-family: 'Teko', $philly-serif;
+        font-weight: 700;
+        font-size: 120px;
+        max-width: 30%;
+        line-height: .8em;
+        letter-spacing: -5px;
+        @include flex(1 1 100%);
+        align-self: flex-start;
+
+
+    }
+    .part {
+        font-family: 'Teko', $philly-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 40px;
+        @include flex(1 1 100%);
+        align-self: flex-start;
+
+    }
+    h1 {
+        font-family: 'Teko', $philly-serif;
+        font-weight: 700;
+        font-size: 65px;
+        // position: absolute;
+        // bottom: 25%;
+        // max-width: 30%;
+        margin-top: 50%;
+        align-self: flex-end;
+    }
+    .byline-section {
+
+        align-self: flex-start;
+
+        .byline {
+            line-height: 1.4em;
+        }
+    }
+}
+.imgDrop {
+    font-family: $philly-serif;
+    font-style: normal;
+    line-height: 1;
+    font-size: 8em;
+
+    color: transparent;
+    display: block;
+    float: left;
+    margin: 0 0.2em -0.1em 0;
+    background-image: url("http://media.philly.com/storage/inquirer/Graphics/test_dropcap.jpg");
+    background-position: center;
+    background-size: contain;
+    padding: 40px;
+    padding-top: 0;
+    margin-top: -10px;
+
 }
