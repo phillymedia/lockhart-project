@@ -36,7 +36,7 @@
 
 .illustration.inline.left {
   float: left;
-  margin-left: -20%;
+  margin-left: -30%;
   margin-right: 20px;
   @include tablet {
     margin-left: 0%;
@@ -55,7 +55,7 @@
 
 .illustration.inline.right {
   float: right;
-  margin-right: -20%;
+  margin-right: -30%;
   margin-left: 20px;
   @include tablet {
     margin-right: 0%;
