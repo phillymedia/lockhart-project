@@ -8,6 +8,49 @@
     position: absolute !important;
 }
 
+$project-serif: 'Teko', $philly-serif;
+
+
+.heroNav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    @include display-flex;
+    z-index: 10;
+    padding-top: 0px;
+
+    .part {
+        @include flex(1);
+        text-align: center;
+        line-height: 1.3em;
+        background: rgba(white,0.8);
+        padding: 20px 0 8px 0;
+        cursor: pointer;
+        @include transition(all .5s ease);
+
+        &:hover {
+            @include transition(all .5s ease);
+            background: black;
+            color: white;
+        }
+        .name {
+            font-family: $project-serif;
+            font-weight: 500;
+            font-size: 25px;
+
+        }
+        .pubdate {
+            font-family: $philly-sans;
+            font-weight: 100;
+            font-size: 25px;
+            font-size: 13px;
+            text-transform: uppercase;
+
+        }
+    }
+}
+
 .heroImage {
     width: 100%;
     margin: 0;
@@ -47,10 +90,12 @@
         flex-wrap: wrap;
         align-items: stretch;
         align-content: flex-start;
+        margin-right: -50px;
+        z-index: 2;
     }
 
     .heroImage {
-        margin-top: -150px;
+        margin-top: -130px;
         margin-left: auto;
         order: 2;
         @include flex(1 1 60%);
@@ -60,12 +105,13 @@
     .title {
         font-family: 'Teko', $philly-serif;
         font-weight: 700;
-        font-size: 120px;
+        font-size: 9vw;
         max-width: 30%;
         line-height: .8em;
         letter-spacing: -5px;
         @include flex(1 1 100%);
         align-self: flex-start;
+        padding-top: 50px;
 
 
     }
@@ -90,7 +136,6 @@
         align-self: flex-end;
     }
     .byline-section {
-
         align-self: flex-start;
 
         .byline {
