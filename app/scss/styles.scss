@@ -1,6 +1,73 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
 
+
+
+// illustration partial
+
+.illustration-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.illustration.absolute {
+  position: absolute;
+  z-index: -1;
+}
+
+.illustration.absolute.left {
+  left:0;
+}
+
+.illustration.absolute.center {
+  margin: 0 auto;
+  left:0;
+  right: 0;
+}
+
+.illustration.absolute.right {
+  right:0;
+}
+
+
+.illustration.inline {
+  position: relative;
+}
+
+.illustration.inline.left {
+  float: left;
+  margin-left: -20%;
+  margin-right: 20px;
+  @include tablet {
+    margin-left: 0%;
+    margin-right: 10px;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.illustration.inline.center {
+  margin: 0 auto;
+  left:0;
+  right: 0;
+}
+
+.illustration.inline.right {
+  float: right;
+  margin-right: -20%;
+  margin-left: 20px;
+  @include tablet {
+    margin-right: 0%;
+    margin-left: 10px;
+  }
+  @include mobile {
+    width: 100%;
+  }
+}
+
+//
+
 .header {
     position: absolute !important;
 }
