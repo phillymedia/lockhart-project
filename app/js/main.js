@@ -52,7 +52,7 @@ function slowscroll() {
         $( ".stickynav" ).hover(
           function() {
               $(this).find(".menu").css("display","block");
-            $(this).find(".menu").addClass("scrollIn");
+            $(this).find(".menu").addClass("stickyShow");
 
           }, function() {
               // $(this).find(".menu").removeClass("stickyshow");
