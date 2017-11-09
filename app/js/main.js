@@ -18,8 +18,17 @@ $(document).ready(function() {
 
 
 
-$(window).scroll(_.throttle(slowscroll, 100));
-var lastScrollTop = 0;
+
+
+
+
+
+  // if ($(".content").attr("class").includes("is-subscriber")) {
+  //     console.log("subscriber")
+  //     $(".content").css("padding-top","0")
+  // }
+});
+console.log("working")
 
 $('body').on('mousewheel DOMMouseScroll', function(e) {
     if($(window).scrollTop() > $(window).height()) {
