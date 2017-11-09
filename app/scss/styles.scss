@@ -1,7 +1,6 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
 @import 'footer.scss';
-
 $project-serif: 'Teko', $philly-serif;
 
 .illustration-wrapper {
@@ -116,8 +115,6 @@ $project-serif: 'Teko', $philly-serif;
     };
 }
 
-
-
 .headerIntro {
     position: relative;
     display: block;
@@ -162,10 +159,9 @@ $project-serif: 'Teko', $philly-serif;
         margin-left: auto;
         @include flex(1 1 50%);
         @include mobile {
-            @include flex(1 1 100%);
-           order: 2;
-           margin-top: -60px;
-
+             @include flex(1 1 100%);
+            order: 2;
+            margin-top: -60px;
         };
 
         img {
@@ -257,7 +253,6 @@ $project-serif: 'Teko', $philly-serif;
         };
 
         .parts {
-
             @include mobile {
                 opacity: 0;
                 @include transition(all .4s ease);
@@ -391,4 +386,48 @@ $project-serif: 'Teko', $philly-serif;
     background-size: contain;
     padding: 0 40px 40px;
     margin-top: -10px;
+}
+
+@include keyframes(stickyFade){
+    0%{opacity: 0}
+    100%{opacity: 1}
+};
+.stickynav {
+    display: none;
+    @include BS-medium {
+        background: rgba(white,0.9);
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        opacity: 0;
+        @include animation(stickyFade .5s ease forwards);
+
+        .stickyheader {
+            font-family: $project-serif;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 0.8em;
+            color: black;
+            text-align: left;
+            letter-spacing: -.5px;
+            position: relative;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+
+
+            &::after {
+                content:"\f107";
+                 font-family: "FontAwesome";
+                 font-size: 80%;
+                 padding: 3px 3px 3px 5px;
+            }
+
+        }
+        .menu {
+            display: none;
+        }
+    };
+
 }
