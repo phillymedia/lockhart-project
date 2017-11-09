@@ -498,3 +498,32 @@ $project-serif: 'Teko', $philly-serif;
     };
 
 }
+.stickyShow {
+    position: absolute;
+    opacity: 0;
+    @include animation(stickyFade .5s ease forwards);
+    width: 500px;
+
+    .name {
+        font-family: $philly-sans;
+        font-weight: 100;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        @include flex(1 1 100%);
+        @include mobile {
+            font-size: 22px;
+            letter-spacing: 0.5px;
+        };
+    }
+
+    .pubdate {
+        font-family: $project-serif;
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        @include flex(1 1 100%);
+        padding-top: 5px;
+    }
+}
