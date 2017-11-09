@@ -5,24 +5,25 @@ $(document).ready(function() {
     //     console.log("subscriber")
     //     $(".content").css("padding-top","0")
     // }
+    $(window).trigger('resize');
 
     AOS.init({
         offset: 50,
         easing: "ease"
-      });
+    });
 
-      $(window).bind('scroll', function(e) {
-          parallaxScroll();
-        });
+    $(window).bind('scroll', function(e) {
+        parallaxScroll();
+    });
 
-        function parallaxScroll() {
-          var scrolled = $(window).scrollTop();
-          $('.illustration-wrapper').css('top', (0 - (scrolled * .1)) + 'px');
-        }
+    function parallaxScroll() {
+        var scrolled = $(window).scrollTop();
+        $('.illustration-wrapper').css('top', (0 - (scrolled * .1)) + 'px');
+    }
+});
 
-
+$(window).resize(function(){
     if ($(window).width() <= 520) {
-        console.log($(window).width())
         $(".heroNav").hover(
             function() {
                 $(".parts").css("display", "block");
@@ -38,7 +39,7 @@ $(document).ready(function() {
             }
         );
     }
-});
+})
 
 
 $(window).scroll(_.throttle(slowscroll, 100));
@@ -55,26 +56,34 @@ function slowscroll() {
                 }, 500);
             }
         } else {
-                $(".header").addClass("scrollIn")
+            $(".header").addClass("scrollIn")
         }
     }
     lastScrollTop = st;
 
-
-    if($(".subHead").offset().top <= $(window).scrollTop()){
-        if($(".stickynav").length <1) {
+console.log($(".footerNav").offset().top - $(window).height()/2, $(window).scrollTop())
+    if ($(".subHead").offset().top + $(window).height()/2 <= $(window).scrollTop() || $(".footerNav").offset().top - $(window).height()/2  < $(window).scrollTop()) {
+        if ($(".stickynav").length < 1) {
             $("body").append('<div class="stickynav"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></div><div class="part notready"><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></div><div class="part notready"><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></div><div class="part notready"><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></div><div class="part notready"><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></div></div></div>')
         }
-        $( ".stickynav" ).hover(
-          function() {
-              $(this).find(".menu").css("display","block");
-            $(this).find(".menu").addClass("stickyShow");
+        $(".stickynav").hover(
+            function() {
+                $(this).find(".menu").addClass("stickyShow");
+                setTimeout(function() {
+                    $(".stickyShow").css("opacity", "1");
+                }, 100);
 
-          }, function() {
-              // $(this).find(".menu").removeClass("stickyshow");
-            // $( this ).find( "span:last" ).remove();
-          }
+            },
+            function() {
+                setTimeout(function() {
+                    $(".stickyShow").removeClass("stickyShow");
+                }, 100);
+                $(".stickyShow").css("opacity", "");
+
+            }
         );
+    } else {
+        $(".stickynav").remove();
 
     }
 }
