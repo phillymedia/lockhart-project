@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var AOS = require('aos');
 
 $(document).ready(function() {
     // if ($(".content").attr("class").includes("is-subscriber")) {
@@ -8,9 +9,13 @@ $(document).ready(function() {
     $(window).trigger('resize');
 
     AOS.init({
-        offset: 50,
-        easing: "ease"
-    });
+        easing: "ease",
+        once: "true",
+        duration: 2000,
+        offset:-50,
+        anchor: "center-bottom",
+        disable: 'mobile'
+      });
 
     $(window).bind('scroll', function(e) {
         parallaxScroll();
