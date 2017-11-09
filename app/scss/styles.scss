@@ -1,5 +1,7 @@
 @import 'longform-styles';
-@import 'philly-styles/values'; // illustration partial
+@import 'philly-styles/values';
+@import 'footer.scss';
+
 $project-serif: 'Teko', $philly-serif;
 
 .illustration-wrapper {
@@ -101,244 +103,20 @@ $project-serif: 'Teko', $philly-serif;
     position: fixed !important;
 }
 
-.heroNav {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    @include display-flex;
-    z-index: 10;
-    padding-top: 0;
-    @include mobile {
-        display: none;
-    };
-
-    .part {
-        @include flex(1);
-        text-align: center;
-        line-height: 1.3em;
-        background: rgba(white,0.8);
-        padding: 20px 0 8px;
-        cursor: pointer;
-        @include transition(all .5s ease);
-        @include mobile {
-            padding: 13px 0 5px;
-        };
-
-        &:hover {
-            @include transition(all .5s ease);
-            background: black;
-            color: white;
-        }
-
-        .name {
-            font-family: $project-serif;
-            font-weight: 500;
-            font-size: 25px;
-            @include mobile {
-                font-size: 22px;
-            };
-        }
-
-        .pubdate {
-            font-family: $philly-sans;
-            font-weight: 100;
-            font-size: 25px;
-            font-size: 13px;
-            text-transform: uppercase;
-        }
-    }
-
-    .notready {
-        color: #666;
-
-        .pubdate {
-            &::before {
-                content: "COMING ";
-            }
-        }
-
-        &:hover {
-            background: rgba(#eee,0.9);
-            color: black;
-            cursor: default;
-        }
-    }
-}
-
-.heroNavMobile {
-    display: none;
-    @include mobile {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        @include display-flex;
-        z-index: 10;
-        padding-top: 0;
-    };
-}
-
 .subHead {
     font-weight: 100;
-    font-family: 'Teko', $philly-serif;
-    font-size: 37px;
+    font-family: $philly-sans;
+    font-size: 24px;
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
     @include mobile {
         font-size: 32px;
     };
 }
 
-.footerNav {
-    padding: 8% 8% 0;
-    position: relative;
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%);
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%);
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%);
-    @include tablet {
-        padding: 20px;
-    };
-    @include mobile {
-        background: none;
-    };
 
-    h2 {
-        font-family: $project-serif;
-        font-size: 50px;
-        padding-left: 10%;
-        @include tablet {
-            padding-left: 5%;
-        };
-        @include mobile {
-            font-size: 35px;
-            padding-left: 0;
-        };
-
-        .subhead {
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 30px;
-            @include mobile {
-                font-size: 22px;
-                display: block;
-                margin-top: -8px;
-                padding-bottom: 15px;
-            };
-        }
-    }
-
-    p {
-        padding-left: 10%;
-        @include tablet {
-            padding-left: 5%;
-        };
-        @include mobile {
-            padding-left: 0;
-        };
-
-    }
-
-    .footertabs {
-        @include display-flex;
-        @include mobile {
-            flex-wrap: wrap;
-            margin-left: -20px;
-            margin-right: -20px;
-            justify-content: center;
-        };
-
-        .part {
-            @include display-flex;
-            align-items: center;
-            align-content: center;
-            flex-wrap: wrap;
-            @include flex(1);
-            text-align: center;
-            line-height: 1.3em;
-            color: white;
-            background: #222;
-            padding: 15px;
-            margin: 5px;
-            cursor: pointer;
-            @include transition(all .5s ease);
-            @include mobile {
-                padding: 10px;
-                @include flex(1 1 100%);
-                margin: 3px 5px;
-            };
-
-            &:hover {
-                @include transition(all .5s ease);
-                background: rgba(white,0.8);
-                color: black;
-            }
-
-            .name {
-                font-family: $project-serif;
-                font-weight: 500;
-                font-size: 25px;
-                @include flex(1 1 100%);
-                @include mobile {
-                    font-size: 22px;
-                    letter-spacing: 0.5px;
-                };
-            }
-
-            .pubdate {
-                font-family: $philly-sans;
-                font-weight: 100;
-                font-size: 25px;
-                font-size: 13px;
-                text-transform: uppercase;
-                @include flex(1 1 100%);
-            }
-        }
-
-        .notready {
-            background: #666;
-            pointer-events: none;
-
-            .pubdate {
-                &::before {
-                    content: "COMING ";
-                }
-            }
-        }
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        left: -5%;
-        top: 20px;
-        // bottom: 40%;
-        height: 58%;
-        right: 50%;
-        z-index: -1;
-        background-image: url('./../../assets/lockhart_day2_f.jpg');
-        background-position: left;
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0.4;
-        @include tablet {
-            height: 40%;
-            top: -30px;
-        };
-        @include mobile {
-            top: -50px;
-            bottom: 0;
-            right: 0;
-            background-position: right;
-            height: 190px;
-
-
-        };
-    }
-
-}
 
 .headerIntro {
     position: relative;
@@ -354,17 +132,23 @@ $project-serif: 'Teko', $philly-serif;
     .heroText {
         order: 1;
         @include flex(1 1 30%);
-        padding: 20% 0 0 50px;
+        padding: 50px 0;
         @include display-flex;
         flex-wrap: wrap;
         align-items: stretch;
         align-content: flex-start;
         margin-right: -50px;
+        position: relative;
         z-index: 2;
+        @include tablet {
+             @include flex(1 1 40%);
+            padding-top: 20px;
+            margin-right: -50px;
+        };
         @include mobile {
              @include flex(1 1 100%);
-            padding: 0 10px;
-            margin: -6% 0 0;
+            margin: 0;
+            padding: 30px 0 0;
         };
     }
 
@@ -378,14 +162,10 @@ $project-serif: 'Teko', $philly-serif;
         margin-left: auto;
         @include flex(1 1 50%);
         @include mobile {
-            // max-width: 80%;
-            // position: absolute;
-            // top: 5%;
-            // right: 0;
-            @include mobile {
-                 @include flex(1 1 100%);
-                order: 1;
-            };
+            @include flex(1 1 100%);
+           order: 2;
+           margin-top: -60px;
+
         };
 
         img {
@@ -394,52 +174,197 @@ $project-serif: 'Teko', $philly-serif;
         }
     }
 
-    .title {
-        font-family: 'Teko', $philly-serif;
-        font-weight: 700;
-        font-size: 7.7vw;
-        max-width: 30%;
-        line-height: 0.8em;
-        letter-spacing: -.2vw;
-        @include flex(1 1 100%);
-        align-self: flex-start;
-        padding-top: 50px;
-        @include mobile {
-            padding: 0;
-            margin: 0;
-            bottom: 0;
-            order: 3;
-        };
-    }
-
-    .part {
-        font-family: 'Teko', $philly-serif;
-        font-weight: 300;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-size: 40px;
-        @include flex(1 1 100%);
-        align-self: flex-start;
-        @include mobile {
-            font-size: 20px;
-            order: 2;
-        };
-    }
-
     h1 {
         font-family: 'Teko', $philly-serif;
         font-weight: 700;
-        font-size: 65px;
-        font-size: 4.6vw;
+        font-size: 8vw;
         line-height: 0.8em;
+        color: black;
         position: absolute;
-        bottom: 10%;
-        max-width: 22%;
+        bottom: 20%;
+        width: auto;
+        left: 50%;
+        @include transform(translateX(-50%));
         @include tablet {
-            font-size: 5.5vw;
+            font-size: 60px;
+            font-size: 8.5vw;
             bottom: 0;
         };
         @include mobile {
+            display: none;
+        };
+    }
+
+    .heroNav {
+        display: inline-block;
+        margin: 0 auto;
+
+        .title {
+            font-family: 'Teko', $philly-serif;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 0.8em;
+            color: black;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            letter-spacing: -.5px;
+            @include flex(0 1 auto);
+            align-self: flex-start;
+            padding-top: 20px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: -20px;
+                right: -20px;
+                border-top: 1px solid #222;
+                bottom: 0;
+            }
+            @include tablet {
+                font-size: 26px;
+                letter-spacing: normal;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+
+                &::after {
+                    content: "";
+                    left: -5px;
+                    right: -5px;
+                    border-top: 1px solid #222;
+                    bottom: 0;
+                }
+            };
+            @include mobile {
+                font-size: 30px;
+                letter-spacing: normal;
+                margin-bottom: 0;
+                cursor: pointer;
+
+                &::after {
+                    content: "";
+                    left: 50px;
+                    right: 50px;
+                    border-top: 1px solid #222;
+                    bottom: 0;
+                }
+            };
+        }
+        @include mobile {
+            display: block;
+            width: 100%;
+        };
+
+        .parts {
+
+            @include mobile {
+                opacity: 0;
+                @include transition(all .4s ease);
+                height: auto;
+                position: absolute;
+                display: none;
+                width: 100%;
+                padding: 0 20%;
+                background: rgba(white,0.95);
+            };
+        }
+
+        .dropDown {
+            @include transition(all .4s ease);
+            opacity: 1;
+        }
+
+        .part {
+            font-family: 'Teko', $philly-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 40px;
+            @include display-flex align-items: flex-start;
+            align-content: flex-start;
+            text-align: left;
+            line-height: 1.4rem;
+            padding: 4px 8px;
+            cursor: pointer;
+            @include transition(all .5s ease);
+            @extend %smoothing;
+            @include tablet {
+                padding: 1px 5px;
+                letter-spacing: 1px;
+            };
+            @include mobile {
+                font-size: 20px;
+                padding: 10px 50px;
+                margin: 0 -50px;
+            };
+
+            .itemmarker {
+                @include flex(0 0 15px);
+                font-size: 20px;
+            }
+
+            .name {
+                font-family: $philly-sans;
+                font-weight: 100;
+                font-size: 14px;
+                color: gray;
+                @include mobile {
+                    line-height: 1.1;
+                    color: black;
+                };
+            }
+
+            .pubdate {
+                font-family: $project-serif;
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                display: none;
+                @include mobile {
+                    display: block;
+                };
+            }
+
+            &:hover {
+                @include transition(all .5s ease);
+                background: #f9f5d8;
+
+                .pubdate {
+                    display: block;
+                }
+            }
+        }
+
+        .selected {
+            .name {
+                font-weight: 400;
+                color: black;
+            }
+        }
+
+        .notready {
+            color: #666;
+
+            .pubdate {
+                &::before {
+                    content: "COMING ";
+                }
+            }
+
+            &:hover {
+                background: transparent;
+                color: black;
+                cursor: default;
+            }
+        }
+    }
+
+    .mobilehead {
+        display: none;
+        @include mobile {
+            padding-left: 20px;
+            display: block;
             position: relative;
             bottom: inherit;
             font-size: 50px;
@@ -466,38 +391,4 @@ $project-serif: 'Teko', $philly-serif;
     background-size: contain;
     padding: 0 40px 40px;
     margin-top: -10px;
-}
-
-.credits {
-    width: 100%;
-    padding: 50px 20px 20px;
-    @include display-flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-transform: uppercase;
-    font-family: $philly-sans;
-    @include mobile {
-        padding-bottom: 0;
-    };
-
-    .creditItem {
-        padding: 6px 20px;
-
-        .title {
-            font-family: $project-serif;
-            color: gray;
-            font-size: 17px;
-            letter-spacing: 1.5px;
-            @include mobile {
-                font-size: 16px;
-            };
-        }
-        font-weight: 500;
-        color: #222;
-        font-size: 14px;
-        @include tablet {
-            padding: 1px 10px;
-            font-size: 13px;
-        };
-    }
 }
