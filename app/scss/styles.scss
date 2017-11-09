@@ -1,83 +1,83 @@
 @import 'longform-styles';
-@import 'philly-styles/values';
-
-
-
-// illustration partial
+@import 'philly-styles/values'; // illustration partial
+$project-serif: 'Teko', $philly-serif;
 
 .illustration-wrapper {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .illustration.absolute {
-  position: absolute;
-  z-index: -1;
+    position: absolute;
+    z-index: -1;
 }
 
 .illustration.absolute.left {
-  left:0;
+    left: 0;
 }
 
 .illustration.absolute.center {
-  margin: 0 auto;
-  left:0;
-  right: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .illustration.absolute.right {
-  right:0;
+    right: 0;
 }
 
-
 .illustration.inline {
-  position: relative;
+    position: relative;
 }
 
 .illustration.inline.left {
-  float: left;
-  margin-left: -20%;
-  margin-right: 20px;
-  @include tablet {
-    margin-left: 0%;
-    margin-right: 10px;
-  }
-  @include mobile {
-    width: 100%;
-  }
+    float: left;
+    margin-left: -20%;
+    margin-right: 20px;
+    @include tablet {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .illustration.inline.center {
-  margin: 0 auto;
-  left:0;
-  right: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .illustration.inline.right {
-  float: right;
-  margin-right: -20%;
-  margin-left: 20px;
-  @include tablet {
-    margin-right: 0%;
-    margin-left: 10px;
-  }
-  @include mobile {
-    width: 100%;
-  }
+    float: right;
+    margin-right: -20%;
+    margin-left: 20px;
+    @include tablet {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    @include mobile {
+        width: 100%;
+    }
 }
-
 //
 
 .header {
     position: absolute !important;
 }
+
 .subscribetoday__wrap {
     position: absolute !important;
 }
-
 @include keyframes(zoomIn) {
-    0%{@include transform(translateY(-100%))}
-    100% {@include transform(translateY(0))}
+    0% {
+        @include transform(translateY(-100%))
+    }
+
+    100% {
+        @include transform(translateY(0))
+    }
 };
 
 .scrollIn {
@@ -86,8 +86,13 @@
     position: fixed !important;
 }
 @include keyframes(zoomOut) {
-    0%{@include transform(translateY(0))}
-    100% {@include transform(translateY(-100%))}
+    0% {
+        @include transform(translateY(0))
+    }
+
+    100% {
+        @include transform(translateY(-100%))
+    }
 };
 
 .scrollOut {
@@ -96,9 +101,6 @@
     position: fixed !important;
 }
 
-$project-serif: 'Teko', $philly-serif;
-
-
 .heroNav {
     position: absolute;
     width: 100%;
@@ -106,7 +108,7 @@ $project-serif: 'Teko', $philly-serif;
     right: 0;
     @include display-flex;
     z-index: 10;
-    padding-top: 0px;
+    padding-top: 0;
     @include mobile {
         display: none;
     };
@@ -116,11 +118,11 @@ $project-serif: 'Teko', $philly-serif;
         text-align: center;
         line-height: 1.3em;
         background: rgba(white,0.8);
-        padding: 20px 0 8px 0;
+        padding: 20px 0 8px;
         cursor: pointer;
         @include transition(all .5s ease);
         @include mobile {
-            padding: 13px 0 5px 0;
+            padding: 13px 0 5px;
         };
 
         &:hover {
@@ -128,6 +130,7 @@ $project-serif: 'Teko', $philly-serif;
             background: black;
             color: white;
         }
+
         .name {
             font-family: $project-serif;
             font-weight: 500;
@@ -135,23 +138,36 @@ $project-serif: 'Teko', $philly-serif;
             @include mobile {
                 font-size: 22px;
             };
-
         }
+
         .pubdate {
             font-family: $philly-sans;
             font-weight: 100;
             font-size: 25px;
             font-size: 13px;
             text-transform: uppercase;
+        }
+    }
 
+    .notready {
+        color: #666;
+
+        .pubdate {
+            &::before {
+                content: "COMING ";
+            }
+        }
+
+        &:hover {
+            background: rgba(#eee,0.9);
+            color: black;
+            cursor: default;
         }
     }
 }
 
-
 .heroNavMobile {
     display: none;
-
     @include mobile {
         position: absolute;
         width: 100%;
@@ -159,11 +175,9 @@ $project-serif: 'Teko', $philly-serif;
         right: 0;
         @include display-flex;
         z-index: 10;
-        padding-top: 0px;
+        padding-top: 0;
     };
-
 }
-
 
 .subHead {
     font-weight: 100;
@@ -172,9 +186,158 @@ $project-serif: 'Teko', $philly-serif;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 3px;
+    @include mobile {
+        font-size: 32px;
+    };
 }
+
 .footerNav {
-    padding: 100px;
+    padding: 8% 8% 0;
+    position: relative;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 20%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 20%);
+    @include tablet {
+        padding: 20px;
+    };
+    @include mobile {
+        background: none;
+    };
+
+    h2 {
+        font-family: $project-serif;
+        font-size: 50px;
+        padding-left: 10%;
+        @include tablet {
+            padding-left: 5%;
+        };
+        @include mobile {
+            font-size: 35px;
+            padding-left: 0;
+        };
+
+        .subhead {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 30px;
+            @include mobile {
+                font-size: 22px;
+                display: block;
+                margin-top: -8px;
+                padding-bottom: 15px;
+            };
+        }
+    }
+
+    p {
+        padding-left: 10%;
+        @include tablet {
+            padding-left: 5%;
+        };
+        @include mobile {
+            padding-left: 0;
+        };
+
+    }
+
+    .footertabs {
+        @include display-flex;
+        @include mobile {
+            flex-wrap: wrap;
+            margin-left: -20px;
+            margin-right: -20px;
+            justify-content: center;
+        };
+
+        .part {
+            @include display-flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            @include flex(1);
+            text-align: center;
+            line-height: 1.3em;
+            color: white;
+            background: #222;
+            padding: 15px;
+            margin: 5px;
+            cursor: pointer;
+            @include transition(all .5s ease);
+            @include mobile {
+                padding: 10px;
+                @include flex(1 1 100%);
+                margin: 3px 5px;
+            };
+
+            &:hover {
+                @include transition(all .5s ease);
+                background: rgba(white,0.8);
+                color: black;
+            }
+
+            .name {
+                font-family: $project-serif;
+                font-weight: 500;
+                font-size: 25px;
+                @include flex(1 1 100%);
+                @include mobile {
+                    font-size: 22px;
+                    letter-spacing: 0.5px;
+                };
+            }
+
+            .pubdate {
+                font-family: $philly-sans;
+                font-weight: 100;
+                font-size: 25px;
+                font-size: 13px;
+                text-transform: uppercase;
+                @include flex(1 1 100%);
+            }
+        }
+
+        .notready {
+            background: #666;
+            pointer-events: none;
+
+            .pubdate {
+                &::before {
+                    content: "COMING ";
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: -5%;
+        top: 20px;
+        // bottom: 40%;
+        height: 58%;
+        right: 50%;
+        z-index: -1;
+        background-image: url('./../../assets/lockhart_day2_f.jpg');
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+        @include tablet {
+            height: 40%;
+            top: -30px;
+        };
+        @include mobile {
+            top: -50px;
+            bottom: 0;
+            right: 0;
+            background-position: right;
+            height: 190px;
+
+
+        };
+    }
+
 }
 
 .headerIntro {
@@ -183,51 +346,72 @@ $project-serif: 'Teko', $philly-serif;
     height: 100%;
     @include display-flex;
     margin-bottom: 50px;
+    @include mobile {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    };
 
     .heroText {
         order: 1;
         @include flex(1 1 30%);
-        padding: 20% 0 0 20px;
+        padding: 20% 0 0 50px;
         @include display-flex;
         flex-wrap: wrap;
         align-items: stretch;
         align-content: flex-start;
         margin-right: -50px;
         z-index: 2;
+        @include mobile {
+             @include flex(1 1 100%);
+            padding: 0 10px;
+            margin: -6% 0 0;
+        };
     }
 
     .heroImage {
         width: 100%;
         margin: 0;
         padding: 0;
+        order: 2;
+        margin-top: -9%;
+        margin-right: -2.1%;
+        margin-left: auto;
+        @include flex(1 1 50%);
+        @include mobile {
+            // max-width: 80%;
+            // position: absolute;
+            // top: 5%;
+            // right: 0;
+            @include mobile {
+                 @include flex(1 1 100%);
+                order: 1;
+            };
+        };
 
         img {
             width: 100%;
             height: auto;
         }
-        margin-top: -9%;
-        margin-right: 8%;
-        margin-left: auto;
-        order: 2;
-        @include flex(1 1 50%);
-
-
     }
-
 
     .title {
         font-family: 'Teko', $philly-serif;
         font-weight: 700;
         font-size: 7.7vw;
         max-width: 30%;
-        line-height: .8em;
+        line-height: 0.8em;
         letter-spacing: -.2vw;
         @include flex(1 1 100%);
         align-self: flex-start;
         padding-top: 50px;
-
-
+        @include mobile {
+            padding: 0;
+            margin: 0;
+            bottom: 0;
+            order: 3;
+        };
     }
+
     .part {
         font-family: 'Teko', $philly-serif;
         font-weight: 300;
@@ -236,37 +420,43 @@ $project-serif: 'Teko', $philly-serif;
         font-size: 40px;
         @include flex(1 1 100%);
         align-self: flex-start;
-
+        @include mobile {
+            font-size: 20px;
+            order: 2;
+        };
     }
+
     h1 {
         font-family: 'Teko', $philly-serif;
         font-weight: 700;
         font-size: 65px;
-        line-height: .8em;
-        // letter-spacing: -.2vw;
+        font-size: 4.6vw;
+        line-height: 0.8em;
         position: absolute;
-        bottom: 0;
-        right: 0;
-        left: auto;
-        // bottom: 25%;
+        bottom: 10%;
         max-width: 22%;
-        // margin-top: 50%;
-        // align-self: flex-end;
-    }
-    .byline-section {
-        align-self: flex-start;
-
-        .byline {
-            line-height: 1.4em;
-        }
+        @include tablet {
+            font-size: 5.5vw;
+            bottom: 0;
+        };
+        @include mobile {
+            position: relative;
+            bottom: inherit;
+            font-size: 50px;
+            max-width: none;
+            order: 4;
+            font-size: 55px;
+            margin-bottom: 0;
+            padding-top: 20px;
+        };
     }
 }
+
 .imgDrop {
     font-family: $philly-serif;
     font-style: normal;
     line-height: 1;
     font-size: 8em;
-
     color: transparent;
     display: block;
     float: left;
@@ -274,8 +464,40 @@ $project-serif: 'Teko', $philly-serif;
     background-image: url("http://media.philly.com/storage/inquirer/Graphics/test_dropcap.jpg");
     background-position: center;
     background-size: contain;
-    padding: 40px;
-    padding-top: 0;
+    padding: 0 40px 40px;
     margin-top: -10px;
+}
 
+.credits {
+    width: 100%;
+    padding: 50px 20px 20px;
+    @include display-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: $philly-sans;
+    @include mobile {
+        padding-bottom: 0;
+    };
+
+    .creditItem {
+        padding: 6px 20px;
+
+        .title {
+            font-family: $project-serif;
+            color: gray;
+            font-size: 17px;
+            letter-spacing: 1.5px;
+            @include mobile {
+                font-size: 16px;
+            };
+        }
+        font-weight: 500;
+        color: #222;
+        font-size: 14px;
+        @include tablet {
+            padding: 1px 10px;
+            font-size: 13px;
+        };
+    }
 }

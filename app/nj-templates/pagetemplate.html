@@ -1,28 +1,25 @@
-{% include "partials/shell/head.html" %}
-
-
-{% block styles %}{% endblock %}
+{% include "partials/shell/head.html" %} {% block styles %}{% endblock %}
 
 <div class="heroNav">
     <div class="part">
         <div class="name">1. In Their Fathers’ Footsteps</div>
-        <div class="pubdate">Nov. 11</div>
+        <div class="pubdate">Nov. 13</div>
     </div>
-    <div class="part">
+    <div class="part notready">
         <div class="name">2. Portrait of a Suspect</div>
-        <div class="pubdate">Nov. 11</div>
+        <div class="pubdate">Nov. 14</div>
     </div>
-    <div class="part">
+    <div class="part notready">
         <div class="name">3. Another Twist, Another Crime</div>
-        <div class="pubdate">Nov. 11</div>
+        <div class="pubdate">Nov. 15</div>
     </div>
-    <div class="part">
+    <div class="part notready">
         <div class="name">4. Interrogation</div>
-        <div class="pubdate">Nov. 11</div>
+        <div class="pubdate">Nov. 16</div>
     </div>
-    <div class="part">
+    <div class="part notready">
         <div class="name">5. The Reckoning</div>
-        <div class="pubdate">Nov. 11</div>
+        <div class="pubdate">Nov. 17</div>
     </div>
 </div>
 
@@ -49,14 +46,45 @@
     </div>
 </div>
 
-{% block headercontent %}{% endblock %}
-
-
-{% block bodycontent %}{% endblock %}
+{% block headercontent %}{% endblock %} {% block bodycontent %}{% endblock %}
 
 <div class="footerNav">
-    <h3>Footer nav goes here</h3>
+    <h2>Undercover Gangster <span class="subhead">About the series</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="footertabs">
+        <div class="part">
+            <div class="name">1. In Their Fathers’ Footsteps</div>
+            <div class="pubdate">Nov. 13</div>
+        </div>
+        <div class="part notready">
+            <div class="name">2. Portrait of a Suspect</div>
+            <div class="pubdate">Nov. 14</div>
+        </div>
+        <div class="part notready">
+            <div class="name">3. Another Twist, Another Crime</div>
+            <div class="pubdate">Nov. 15</div>
+        </div>
+        <div class="part notready">
+            <div class="name">4. Interrogation</div>
+            <div class="pubdate">Nov. 16</div>
+        </div>
+        <div class="part notready">
+            <div class="name">5. The Reckoning</div>
+            <div class="pubdate">Nov. 17</div>
+        </div>
+    </div>
+    <div class="credits">
+        <span class="creditItem"><span class="title">Writing:</span> David Gambacorta</span>
+        <span class="creditItem"><span class="title">Design:</span> Credit Name</span>
+        <span class="creditItem"><span class="title">Illustrations:</span> Credit Name</span>
+        <span class="creditItem"><span class="title">Editing:</span> Credit Name</span>
+        <span class="creditItem"><span class="title">Credit:</span> Credit Name</span>
+        <span class="creditItem"><span class="title">Credit:</span> Credit Name</span>
+        <span class="creditItem"><span class="title">Credit:</span> Credit Name</span>
+
+    </div>
 </div>
+{% include "partials/recirc-box.html" %}
 <div>{% include "partials/script-links.html" %}</div>
-{% block jsfile %}{% endblock %}
-{% include "partials/shell/footer.html" %}
+{% block jsfile %}{% endblock %} {% include "partials/shell/footer.html" %}
