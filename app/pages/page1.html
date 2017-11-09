@@ -1,6 +1,3 @@
-{% set page = "page1" %}
-{% set headline = "In Their Fathers’ Footsteps" %}
-
 {% extends "pagetemplate.html" %} {% block styles %}
 <!--removeIf(production)-->
 <!--build:css min-files/styles.min.css-->
@@ -8,22 +5,14 @@
 <link rel="stylesheet" href="css/pages/page1.css">
 <!--endbuild-->
 <!--endRemoveIf(production)-->
-{% endblock %}
-
-
-{% block heroimage %}
-<img src="./assets/lockhart_day1_a.jpg" alt="">
-{% endblock %}
-
-
-{% block headercontent %}
-
+{% endblock %} {% block headercontent %}
 <div class="headerIntro">
     <div class="heroImage part1hero"><img src="./assets/lockhart_day1_a.jpg" alt="">
         <!-- <h1>In Their Fathers’ Footsteps</h1> -->
     </div>
     <div class="heroText">
-        <!-- <div class="part">Part 1</div> -->
+        <div class="title">Undercover Gangster</div>
+        <div class="part">Part 1</div>
         <h1>In Their Fathers’ Footsteps</h1>
     </div>
 
