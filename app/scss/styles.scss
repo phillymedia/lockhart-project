@@ -1,5 +1,6 @@
 @import 'longform-styles';
 @import 'philly-styles/values';
+@import 'aos.css';
 
 
 
@@ -30,13 +31,29 @@
 }
 
 
+.gradient-l-to-r {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+64,ffffff+100&1+64,0+100 */
+  background: -moz-linear-gradient(left, rgba(255,255,255,1) 84%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(255,255,255,1) 84%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(255,255,255,1) 84%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.gradient-r-to-l {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
 .illustration.inline {
   position: relative;
 }
 
 .illustration.inline.left {
   float: left;
-  margin-left: -30%;
+  // margin-left: -30%;
   margin-right: 20px;
   @include tablet {
     margin-left: 0%;
@@ -55,7 +72,7 @@
 
 .illustration.inline.right {
   float: right;
-  margin-right: -30%;
+  // margin-right: -30%;
   margin-left: 20px;
   @include tablet {
     margin-right: 0%;
