@@ -9,7 +9,6 @@ $(document).ready(function() {
     $(window).trigger('resize');
 
     AOS.init({
-
         easing: "ease",
         once: "true",
         duration: 2000,
@@ -17,7 +16,6 @@ $(document).ready(function() {
         anchor: "center-bottom",
         disable: 'mobile'
       });
-
 
     $(window).bind('scroll', function(e) {
         parallaxScroll();
