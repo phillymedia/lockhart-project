@@ -31,6 +31,10 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "aos": "^2.2.0"
+=======
     "lodash": "^4.17.4"
+>>>>>>> master
   }
 }
