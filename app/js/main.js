@@ -5,6 +5,22 @@ $(document).ready(function() {
     //     console.log("subscriber")
     //     $(".content").css("padding-top","0")
     // }
+
+    AOS.init({
+        offset: 50,
+        easing: "ease"
+      });
+
+      $(window).bind('scroll', function(e) {
+          parallaxScroll();
+        });
+
+        function parallaxScroll() {
+          var scrolled = $(window).scrollTop();
+          $('.illustration-wrapper').css('top', (0 - (scrolled * .1)) + 'px');
+        }
+
+
     if ($(window).width() <= 520) {
         console.log($(window).width())
         $(".heroNav").hover(
