@@ -209,6 +209,9 @@
     font-family: $philly-sans;
     color: #777;
     font-size: 16px;
+    @include mobile {
+        line-height: 1.4em;
+    };
 }
 
 .dateline {
@@ -220,7 +223,7 @@
     line-height: 2.25em;
     clear: both;
     @include mobile {
-        padding-top: 30px;
+        // padding-top: 30px;
     }
 }
 

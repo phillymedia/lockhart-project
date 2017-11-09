@@ -11,3 +11,24 @@
         background-size: contain;
     }
 }
+
+
+.headerIntro {
+    position: relative;
+    display: block;
+    height: 100%;
+    @include display-flex;
+    margin-bottom: 50px;
+
+    .heroText {
+        position: absolute;
+        display: block;
+        height: 100%;
+
+    }
+
+    h1 {
+        padding-top: 25%;
+        position: relative;
+    }
+}
