@@ -1,6 +1,3 @@
-{% set page = "page2" %}
-{% set headline = "Portrait of a Suspect" %}
-
 {% extends "pagetemplate.html" %} {% block styles %}
 <!--removeIf(production)-->
 <!--build:css min-files/styles.min.css-->
@@ -8,14 +5,7 @@
 <link rel="stylesheet" href="css/pages/page2.css">
 <!--endbuild-->
 <!--endRemoveIf(production)-->
-{% endblock %}
-
-{% block heroimage %}
-<img src="./assets/hospital2.jpg" alt="">
-{% endblock %}
-
-
-{% block headercontent %}
+{% endblock %} {% block headercontent %}
 
 <div class="headerIntro">
     <div class="heroImage part2hero"><img src="./assets/hospital2_fpo.jpg" alt="">
@@ -24,7 +14,7 @@
     <div class="heroText">
         <div class="title">Undercover Gangster</div>
         <div class="part">Part 2</div>
-        <h1></h1>
+        <h1>Portrait of a Suspect</h1>
     </div>
 
 </div>
