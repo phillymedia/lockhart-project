@@ -3,10 +3,11 @@ $project-serif: 'Teko', $philly-serif;
 
 .footerNav {
     padding: 50px 8% 0;
+    margin-top: 100px;
     position: relative;
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%);
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 35%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 35%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 35%);
     @include tablet {
         padding: 70px 20px 20px 20px;
     };
@@ -46,9 +47,37 @@ $project-serif: 'Teko', $philly-serif;
             };
         }
     }
+    .footintro {
+        font-family: $project-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 22px;
+    }
+
+    .byline {
+        padding-left: 10%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: -10px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #222;
+        font-family: $philly-sans;
+
+        @include tablet {
+            padding-left: 20%;
+        };
+        @include mobile {
+            padding-left: 0;
+        };
+    }
 
     p {
         padding-left: 10%;
+        // font-family: $philly-sans;
+        padding-right: 10%;
+
         @include tablet {
             padding-left: 0%;
         };
@@ -88,8 +117,8 @@ $project-serif: 'Teko', $philly-serif;
 
             &:hover {
                 @include transition(all .5s ease);
-                background: rgba(white,0.8);
-                color: black;
+                background: black;
+                color: white;
             }
 
             .name {
@@ -116,12 +145,13 @@ $project-serif: 'Teko', $philly-serif;
             }
         }
         .selected {
-            background: black;
-            color: white;
+            background: #f9f5d8;
+            color: black;
         }
 
         .notready {
-            background: #ddd;
+            // background: #ddd;
+            border: 1px solid #ddd;
             pointer-events: none;
 
             .pubdate {
@@ -144,7 +174,7 @@ $project-serif: 'Teko', $philly-serif;
         background-position: left;
         background-size: contain;
         background-repeat: no-repeat;
-        opacity: 0.5;
+        // opacity: 0.5;
         border-top: 2px solid black;
         @include tablet {
             height: 50%;

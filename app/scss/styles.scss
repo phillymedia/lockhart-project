@@ -200,10 +200,9 @@ $project-serif: 'Teko', $philly-serif;
 .subHead {
     font-weight: 100;
     font-family: $philly-sans;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 22px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     padding-bottom: 20px;
     @include mobile {
         font-size: 32px;
@@ -224,7 +223,9 @@ $project-serif: 'Teko', $philly-serif;
     .heroText {
         order: 1;
         @include flex(1 1 30%);
-        padding: 50px 0;
+        padding: 30px 0;
+        padding-left: 50px;
+
         @include display-flex;
         flex-wrap: wrap;
         align-items: stretch;
@@ -274,8 +275,8 @@ $project-serif: 'Teko', $philly-serif;
         position: absolute;
         bottom: 20%;
         width: auto;
-        left: 50%;
-        @include transform(translateX(-50%));
+        // left: 50%;
+        // @include transform(translateX(-50%));
         @include tablet {
             font-size: 60px;
             font-size: 8.5vw;
@@ -288,7 +289,7 @@ $project-serif: 'Teko', $philly-serif;
 
     .heroNav {
         display: inline-block;
-        margin: 0 auto;
+        // margin: 0 auto;
 
         .title {
             font-family: 'Teko', $philly-serif;
@@ -428,7 +429,7 @@ $project-serif: 'Teko', $philly-serif;
 
         .selected {
             .name {
-                font-weight: 400;
+                font-weight: 500;
                 color: black;
             }
         }
@@ -471,16 +472,21 @@ $project-serif: 'Teko', $philly-serif;
     font-family: $philly-serif;
     font-style: normal;
     line-height: 1;
-    font-size: 8em;
+    font-size: 9em;
     color: transparent;
     display: block;
     float: left;
-    margin: 0 0.2em -0.1em 0;
-    background-image: url("http://media.philly.com/storage/inquirer/Graphics/test_dropcap.jpg");
-    background-position: center;
-    background-size: contain;
-    padding: 0 40px 40px;
-    margin-top: -10px;
+    margin: 0 0em 0em 0;
+    background-position: left center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    padding: 0 50px 50px;
+    margin-top: -8px;
+}
+
+.letterD {
+    background-image: url("./../../assets/D.jpg");
+    padding-right: 0px;
 }
 
 @include keyframes(stickyFade){
@@ -496,6 +502,9 @@ $project-serif: 'Teko', $philly-serif;
         top: 0;
         left: 0;
         padding: 20px;
+        padding-bottom: 0;
+        padding-right: 70px;
+        z-index: 100;
         opacity: 0;
         @include animation(stickyFade .5s ease forwards);
 
@@ -510,7 +519,7 @@ $project-serif: 'Teko', $philly-serif;
             position: relative;
             border-bottom: 1px solid black;
             padding-bottom: 5px;
-
+            cursor: pointer;
 
             &::after {
                 content:"\f107";
@@ -521,37 +530,75 @@ $project-serif: 'Teko', $philly-serif;
 
         }
         .menu {
+            background: rgba(white,0.9);
             display: none;
+            opacity: 0;
+            @include transition(all .5s ease);
+            padding-top: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            left: 0;
+            .name {
+                font-family: $philly-sans;
+                font-weight: 100;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: normal;
+                @include flex(1 1 100%);
+                @include mobile {
+                    font-size: 22px;
+                    letter-spacing: 0.5px;
+                };
+            }
+
+            .pubdate {
+                font-family: $project-serif;
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                @include flex(1 1 100%);
+                padding-top: 2px;
+
+            }
+            .part {
+                padding: 8px 10px;
+                margin-left: -10px;
+                margin-right: -10px;
+                cursor: pointer;
+                @include transition(all .5s ease);
+                &:hover {
+                    @include transition(all .5s ease);
+                    background: #f9f5d8;
+
+                }
+            }
+            .notready {
+                color: #666;
+
+                .pubdate {
+                    &::before {
+                        content: "COMING ";
+                    }
+                }
+
+                &:hover {
+                    background: transparent;
+                    color: black;
+                    cursor: default;
+                }
+            }
+
+        }
+        .stickyShow {
+            display: block;
+            position: absolute;
+            width: auto;
+            @include transition(all .5s ease);
+
+
         }
     };
 
-}
-.stickyShow {
-    position: absolute;
-    opacity: 0;
-    @include animation(stickyFade .5s ease forwards);
-    width: 500px;
-
-    .name {
-        font-family: $philly-sans;
-        font-weight: 100;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        @include flex(1 1 100%);
-        @include mobile {
-            font-size: 22px;
-            letter-spacing: 0.5px;
-        };
-    }
-
-    .pubdate {
-        font-family: $project-serif;
-        font-weight: 300;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        @include flex(1 1 100%);
-        padding-top: 5px;
-    }
 }
