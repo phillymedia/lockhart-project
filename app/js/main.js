@@ -25,22 +25,6 @@ $(document).ready(function() {
 });
 
 
-AOS.init({
-  offset: 50,
-  easing: "ease"
-});
-
-
-$(window).bind('scroll', function(e) {
-  parallaxScroll();
-});
-
-function parallaxScroll() {
-  var scrolled = $(window).scrollTop();
-  $('.illustration-wrapper').css('top', (0 - (scrolled * .1)) + 'px');
-}
-
-
 $(window).scroll(_.throttle(slowscroll, 100));
 var lastScrollTop = 0;
 
