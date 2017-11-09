@@ -24,7 +24,7 @@
 
 
         <!-- "left, center, right", "width", "opactiy", "boot", image"  -->
-        {% set absolute = ["illustration_1", "right", "50%", "0.8", "./assets/lockhart_day1_g.jpg","data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
+        {% set absolute = ["illustration_1", "right", "50%", "0.8", "./assets/lockhart_day1_g.jpg","data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
 
 
 
@@ -66,7 +66,7 @@
 
 
       <!-- "left, center, right", "width", "opactiy", "boot", image"  -->
-      {% set absolute = ["illustration_3", "left", "30%", "0.8", "./assets/lockhart_day1_e.jpg","data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
+      {% set absolute = ["illustration_3", "left", "30%", "0.8", "./assets/lockhart_day1_e.jpg","data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
 
 
 
@@ -96,7 +96,7 @@
 
       <p>After the show-and-tell, Foster carefully returned the guns to a hiding spot on the second floor of his house. Michael hung around until midnight, then left with another friend.</p>
       <!-- "left, center, right", "width", "image"  -->
-      {% set absolute = ["illustration_3", "right", "40%","0.8", "./assets/lockhart_day1_f.jpg", "data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
+      {% set absolute = ["illustration_3", "right", "40%","0.8", "./assets/lockhart_day1_f.jpg", "data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
 
 
 
@@ -107,13 +107,14 @@
         above his family&rsquo;s legacy of chaos and crime.</p>
       <p>Lockhart liked to believe they were right. He devoted some of his free time to volunteering with Philadelphia Ceasefire, lecturing young people about the senselessness of gun violence. It was like therapy, in a sense, an exercise to convince him
         to stay on the straight and narrow.</p>
+        {% set quote = ["My life is on the line. I gotta get these guns back!", ""] %} {% include "partials/left-quote.html" %}
+
       <p>His phone buzzed. It was Foster.</p>
       <p>&ldquo;Where the guns at?&rdquo; Foster shrieked.</p>
 
 
       <p>&ldquo;I don&rsquo;t know,&rdquo; Michael said.</p>
 
-      {% set quote = ["My life is on the line. I gotta get these guns back!", ""] %} {% include "partials/left-quote.html" %}
 
       <p>&ldquo;My life is on the line,&rdquo; Foster sputtered. &ldquo;I gotta get these guns back!&rdquo;</p>
       <p>He could tell that Foster was sick with worry, and calmly assured him that everything would work out just fine. What Michael&nbsp;<em>didn&rsquo;t</em>&nbsp;say was that he had Brooks&rsquo; guns.</p>
@@ -138,7 +139,7 @@
 
 
       <!-- "left, center, right", "width", "image"  -->
-      {% set absolute = ["illustration_4", "left", "55%","0.8", "./assets/lockhart_guns_fpo.jpg", "data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
+      {% set absolute = ["illustration_4", "left", "55%","0.8", "./assets/lockhart_guns_fpo.jpg", "data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
 
 
       <p>But after shaking hands with Casey and the other suits, Michael Lockhart slipped back into the soap opera about the missing guns. To this point, he hadn&rsquo;t been much more than a glorified bench player in Brooks&rsquo; gang. His father and namesake
@@ -151,8 +152,6 @@
       <p>Their death warrants, in other words, had been signed.</p>
       <p>On the morning of Aug. 18 &mdash; seven days after Brooks&rsquo; guns vanished &mdash; his underlings decided it was time to collect. They agreed to kill Downs first.</p>
 
-            <!-- "left, center, right", "width", "image"  -->
-            {% set absolute = ["illustration_5", "right", "40%","0.8", "./assets/cycling_fpo.jpg", "data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
 
       <p>Lockhart&nbsp;was dressed in a white T-shirt, camouflage pants and New Balance track sneakers. He huddled behind bushes on Angora Terrace with a handful of accomplices: Michael &ldquo;Spazz&rdquo; Smith-Davis, Kasheem &ldquo;Nu Nu&rdquo; Brown,
         and James &ldquo;JB&rdquo; Booker. They were locked, loaded, and ready to pounce.</p>
@@ -163,6 +162,8 @@
       <p>Downs came rolling down the street on his bicycle and noticed a flurry of movement out of the corner of his eyes. Michael stepped forward first,&nbsp;lifted&nbsp;his .40-caliber handgun and started firing. The others followed. Gunshots exploded
         in a furious barrage, like the final gasps of a fireworks display on the Fourth of July. The bullets ripped into Downs&rsquo; body, knocking him off his bike. He tumbled to the hot asphalt, and watched the gunmen draw closer. They were practically
         standing on top of him as they continued to fire.</p>
+        <!-- "left, center, right", "width", "image"  -->
+        {% set absolute = ["illustration_5", "right", "40%","0.8", "./assets/cycling_fpo.jpg", "data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
 
 
       <p>A neighbor ran to his side after the shooters scattered. Downs choked out four words: &ldquo;Go get my mom.&rdquo; He stayed awake long enough to see his mother step outside and faint.</p>
