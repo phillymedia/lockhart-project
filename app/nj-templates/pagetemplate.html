@@ -1,76 +1,90 @@
 {% include "partials/shell/head.html" %} {% block styles %}{% endblock %}
 
-<div class="heroNav">
-    <div class="part">
-        <div class="name">1. In Their Fathers’ Footsteps</div>
-        <div class="pubdate">Nov. 13</div>
+
+<div class="headerIntro">
+    <div class="heroImage part1hero">
+        {% block heroimage %}{% endblock %}
+
     </div>
-    <div class="part notready">
-        <div class="name">2. Portrait of a Suspect</div>
-        <div class="pubdate">Nov. 14</div>
+    <div class="heroText">
+        <div class="heroNav">
+            <div class="title">Undercover Gangster</div>
+
+            <div class="parts">
+                <div class="part {% if page == 'page1' %}selected{% endif %}">
+                    <div class="itemmarker"></div>
+                    <div class="items">
+                        <div class="name">In Their Fathers’ Footsteps</div>
+                        <div class="pubdate">Nov. 13</div>
+                    </div>
+                </div>
+
+                <div class="part notready {% if page == 'page2' %}selected{% endif %}">
+                    <div class="itemmarker"></div>
+                    <div class="items">
+                        <div class="name">Portrait of a Suspect</div>
+                        <div class="pubdate">Nov. 14</div>
+                    </div>
+                </div>
+                <div class="part notready {% if page == 'page3' %}selected{% endif %}">
+                    <div class="itemmarker"></div>
+                    <div class="items">
+                        <div class="name">Another Twist, Another Crime</div>
+                        <div class="pubdate">Nov. 15</div>
+                    </div>
+                </div>
+                <div class="part notready {% if page == 'page4' %}selected{% endif %}">
+                    <div class="itemmarker"></div>
+                    <div class="items">
+                        <div class="name">Interrogation</div>
+                        <div class="pubdate">Nov. 16</div>
+                    </div>
+                </div>
+                <div class="part notready {% if page == 'page5' %}selected{% endif %}">
+                    <div class="itemmarker"></div>
+                    <div class="items">
+                        <div class="name">The Reckoning</div>
+                        <div class="pubdate">Nov. 17</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="part">Part 1</div> -->
+        <h1>{{headline}}</h1>
     </div>
-    <div class="part notready">
-        <div class="name">3. Another Twist, Another Crime</div>
-        <div class="pubdate">Nov. 15</div>
-    </div>
-    <div class="part notready">
-        <div class="name">4. Interrogation</div>
-        <div class="pubdate">Nov. 16</div>
-    </div>
-    <div class="part notready">
-        <div class="name">5. The Reckoning</div>
-        <div class="pubdate">Nov. 17</div>
-    </div>
+
+    <h1 class="mobilehead">{{headline}}</h1>
+
+
 </div>
 
-<div class="heroNav heroNavMobile">
-    <div class="part">
-        <div class="name">Part 1</div>
-        <div class="pubdate">Nov. 11</div>
-    </div>
-    <div class="part">
-        <div class="name">Part 2</div>
-        <div class="pubdate">Nov. 11</div>
-    </div>
-    <div class="part">
-        <div class="name">Part 3</div>
-        <div class="pubdate">Nov. 11</div>
-    </div>
-    <div class="part">
-        <div class="name">Part 4</div>
-        <div class="pubdate">Nov. 11</div>
-    </div>
-    <div class="part">
-        <div class="name">Part 5</div>
-        <div class="pubdate">Nov. 11</div>
-    </div>
-</div>
 
-{% block headercontent %}{% endblock %} {% block bodycontent %}{% endblock %}
+
+{% block bodycontent %}{% endblock %}
 
 <div class="footerNav">
     <h2>Undercover Gangster <span class="subhead">About the series</span></h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <div class="footertabs">
-        <div class="part">
-            <div class="name">1. In Their Fathers’ Footsteps</div>
+        <div class="part {% if page == 'page1' %}selected{% endif %}">
+            <div class="name">In Their Fathers’ Footsteps</div>
             <div class="pubdate">Nov. 13</div>
         </div>
-        <div class="part notready">
-            <div class="name">2. Portrait of a Suspect</div>
+        <div class="part notready {% if page == 'page2' %}selected{% endif %}">
+            <div class="name">Portrait of a Suspect</div>
             <div class="pubdate">Nov. 14</div>
         </div>
-        <div class="part notready">
-            <div class="name">3. Another Twist, Another Crime</div>
+        <div class="part notready {% if page == 'page3' %}selected{% endif %}">
+            <div class="name">Another Twist, Another Crime</div>
             <div class="pubdate">Nov. 15</div>
         </div>
-        <div class="part notready">
-            <div class="name">4. Interrogation</div>
+        <div class="part notready {% if page == 'page4' %}selected{% endif %}">
+            <div class="name">Interrogation</div>
             <div class="pubdate">Nov. 16</div>
         </div>
-        <div class="part notready">
-            <div class="name">5. The Reckoning</div>
+        <div class="part notready {% if page == 'page5' %}selected{% endif %}">
+            <div class="name">The Reckoning</div>
             <div class="pubdate">Nov. 17</div>
         </div>
     </div>
