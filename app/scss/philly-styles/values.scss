@@ -12,6 +12,15 @@ $philly-darkgray: #222;
 $philly-gray: #666;
 $philly-lightgray: #d9d9d9;
 
+%smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: none;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 %noselect {
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -38,7 +47,7 @@ $philly-lightgray: #d9d9d9;
     }
 }
 @mixin mobile {
-     @media only screen and (max-width: 480px){
+     @media only screen and (max-width: 520px){
         @content;
     }
 }

@@ -1,0 +1,194 @@
+@import 'philly-styles/values'; // illustration partial
+$project-serif: 'Teko', $philly-serif;
+
+.footerNav {
+    padding: 50px 8% 0;
+    position: relative;
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+    @include tablet {
+        padding: 70px 20px 20px 20px;
+    };
+    @include mobile {
+        background: -moz-linear-gradient(right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 30%);
+        background: -webkit-linear-gradient(right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+        background: linear-gradient(to left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%);
+        padding: 60px 20px 20px 20px;
+    };
+
+    h2 {
+        font-family: $project-serif;
+        font-size: 50px;
+        padding-left: 10%;
+        @include tablet {
+            padding-left: 20%;
+        };
+        @include mobile {
+            font-size: 35px;
+            padding-left: 0;
+        };
+
+        .subhead {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 30px;
+            @include tablet {
+                display: block;
+                margin-top: -12px;
+            };
+            @include mobile {
+                font-size: 22px;
+                display: block;
+                margin-top: -8px;
+                padding-bottom: 15px;
+            };
+        }
+    }
+
+    p {
+        padding-left: 10%;
+        @include tablet {
+            padding-left: 0%;
+        };
+        @include mobile {
+            padding-left: 0;
+        };
+    }
+
+    .footertabs {
+        @include display-flex;
+        @include mobile {
+            flex-wrap: wrap;
+            margin-left: -20px;
+            margin-right: -20px;
+            justify-content: center;
+        };
+
+        .part {
+            @include display-flex;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            @include flex(1);
+            text-align: center;
+            line-height: 1.3em;
+            // color: white;
+            // background: #222;
+            padding: 15px;
+            margin: 5px;
+            cursor: pointer;
+            @include transition(all .5s ease);
+            @include mobile {
+                padding: 10px;
+                @include flex(1 1 100%);
+                margin: 3px 5px;
+            };
+
+            &:hover {
+                @include transition(all .5s ease);
+                background: rgba(white,0.8);
+                color: black;
+            }
+
+            .name {
+                font-family: $philly-sans;
+                font-weight: 100;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                @include flex(1 1 100%);
+                @include mobile {
+                    font-size: 22px;
+                    letter-spacing: 0.5px;
+                };
+            }
+
+            .pubdate {
+                font-family: $project-serif;
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                @include flex(1 1 100%);
+                padding-top: 5px;
+            }
+        }
+        .selected {
+            background: black;
+            color: white;
+        }
+
+        .notready {
+            background: #ddd;
+            pointer-events: none;
+
+            .pubdate {
+                &::before {
+                    content: "COMING ";
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: -2.5%;
+        top: 20px;
+        height: 58%;
+        right: 50%;
+        z-index: -1;
+        background-image: url('./../../assets/lockhart_day3_a.jpg');
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        border-top: 2px solid black;
+        @include tablet {
+            height: 50%;
+            left: -15%;
+            // top: -30px;
+        };
+        @include mobile {
+            bottom: 0;
+            right: -20%;
+            background-position: right;
+            height: 30%;
+
+        };
+    }
+}
+.credits {
+    width: 100%;
+    padding: 50px 20px 20px;
+    @include display-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: $philly-sans;
+    @include mobile {
+        padding-bottom: 0;
+    };
+
+    .creditItem {
+        padding: 6px 20px;
+
+        .title {
+            font-weight: 100;
+            color: gray;
+            @include mobile {
+                font-size: 16px;
+
+            };
+        }
+        font-weight: 500;
+        color: #222;
+        font-size: 14px;
+        @include tablet {
+            padding: 1px 10px;
+            font-size: 13px;
+        };
+    }
+}
