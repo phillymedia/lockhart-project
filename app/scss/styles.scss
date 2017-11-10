@@ -147,6 +147,7 @@ $project-serif: 'Teko', $philly-sans;
 
 .containerQuoteText {
   font-family: $project-serif;
+
   font-weight: 400;
   line-height: 1.25em;
   font-size: 36px;
@@ -281,6 +282,7 @@ $project-serif: 'Teko', $philly-sans;
     @include mobile {
       font-size: 22px;
       letter-spacing: 2px;
+
     };
   }
 
@@ -299,23 +301,28 @@ $project-serif: 'Teko', $philly-sans;
       font-size: 8.5vw;
       bottom: 0;
     };
+
     @include mobile {
       display: none;
       left: inherit;
     };
     @include BS-large {
       bottom: 20%;
+
     };
     @include BS-medium {
       bottom: 10px;
     };
+
   }
 
   .heroNav {
     display: inline-block;
     // margin: 0 auto;
     .title {
+
       font-family: $project-serif;
+
       font-weight: 700;
       font-size: 40px;
       line-height: 0.8em;
@@ -391,7 +398,9 @@ $project-serif: 'Teko', $philly-sans;
     }
 
     .part {
+
       font-family: $project-serif;
+
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -475,10 +484,12 @@ $project-serif: 'Teko', $philly-sans;
           position: absolute;
           background-repeat: no-repeat;
           background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-marker-3.svg");
+
           background-size: 100% 100%;
           background-position: center right;
           background-size: contain;
            opacity: 0.8;
+
         }
       }
     }
@@ -488,8 +499,10 @@ $project-serif: 'Teko', $philly-sans;
         color: #adadad;
       }
 
+
       .pubdate {
         color: #666;
+
 
         &::before {
           content: "COMING ";
@@ -675,7 +688,9 @@ $project-serif: 'Teko', $philly-sans;
 
 .container p {
   a {
+
       background: #f9f5d8;
+
     cursor: pointer;
     color: #000;
     box-shadow: inset -2px -5px 0 -2px #e8e3be;
@@ -685,6 +700,7 @@ $project-serif: 'Teko', $philly-sans;
 
 .container p {
   a:hover {
+
     box-shadow: inset -2px -30px 0 -3px rgba(#e8e3be,0.8);
     text-decoration: none;
   }
@@ -703,4 +719,5 @@ $project-serif: 'Teko', $philly-sans;
         font-style: normal;
 
     }
+
 }
