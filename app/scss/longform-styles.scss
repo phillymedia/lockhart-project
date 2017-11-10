@@ -206,13 +206,19 @@
 .byline-section {
     padding-bottom: 50px;
 }
+.subscribetoday {
+    a {
+        color: white;
+    }
+}
 
 .byline {
     // line-height: 2.25em;
-    top: 15px;
+    // top: 15px;
     font-family: $philly-sans;
     color: #777;
     font-size: 16px;
+    line-height: 1.7em;
     @include mobile {
         line-height: 1.4em;
     };
