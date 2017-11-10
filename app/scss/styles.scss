@@ -5,15 +5,26 @@
 $project-serif: 'Teko', $philly-serif;
 
 
+.adUnitWrapper-center {
+  width: 100%;
+  margin: 40px 0;
+}
 
+.adUnit {
+  margin: 0 auto;
+}
 
 .section-break {
   width: 100%;
-  // border-bottom: 5px solid #444;
-  margin:50px 0;
+  // border-bottom: 2px solid #ddd;
+  margin:80px 0 80px;
   text-align: center;
   font-size: 40px;
+}
 
+.section-break img {
+  opacity: 0.8;
+  width: 100px;
 }
 
 
@@ -39,11 +50,9 @@ $project-serif: 'Teko', $philly-serif;
     }
 }
 
-// .illustration.absolute img {
-//     @include tablet {
-//       width: 100%;
-//     }
-// }
+.illustration {
+    padding:10px 0 30px;
+}
 
 .illustration.absolute.left {
     left: 0;
@@ -105,7 +114,7 @@ $project-serif: 'Teko', $philly-serif;
     z-index: 0;
     width: 70%;
     height: 100%;
-    display: block;
+    display: block !important;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -503,7 +512,7 @@ $project-serif: 'Teko', $philly-serif;
 }
 
 .letterD {
-    background-image: url("./../../assets/D.jpg");
+    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day1/D.jpg");
     padding-right: 0px;
 }
 

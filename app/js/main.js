@@ -71,8 +71,10 @@ function slowscroll() {
     }
     lastScrollTop = st;
 
+
     // console.log($(".footerNav").offset().top - $(window).height()*1.5, $(window).scrollTop())
     if ($(".byline-section").offset().top + $(window).height() / 2 <= $(window).scrollTop() && $(".footerNav").offset().top - $(window).height() * 1.5 > $(window).scrollTop()) {
+
         if ($(".stickynav").length < 1) {
             $("body").append('<div class="stickynav"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></div><div class="part notready"><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></div><div class="part notready"><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></div><div class="part notready"><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></div><div class="part notready"><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></div></div></div>')
         }
