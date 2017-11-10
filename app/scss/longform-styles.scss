@@ -245,6 +245,9 @@
     color: #777;
     font-size: 16px;
     line-height: 1.7em;
+    a {
+        color: $philly-red !important;
+    }
     em {
         font-size: 15px;
     }

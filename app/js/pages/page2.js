@@ -1,11 +1,13 @@
 console.log('page 2')
 
+
 // $(window).resize(function() {
   if ($(window).width() > 1000) {
     var distance = $('#illustration_3-trigger').offset().top,
       $window = $(window),
       release3 = $("#illustration_3-trigger-release").offset().top;
     $window.scroll(function() {
+
       console.log(distance, $window.scrollTop(), release3);
       if ($window.scrollTop() >= distance && $window.scrollTop() <= release3) {
         console.log("fire");
