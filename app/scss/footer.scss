@@ -80,7 +80,7 @@ $project-serif: 'Teko', $philly-serif;
         padding-right: 10%;
 
         @include tablet {
-            padding-left: 0%;
+            padding-left: 20%;
         };
         @include mobile {
             padding-left: 0;
@@ -89,6 +89,10 @@ $project-serif: 'Teko', $philly-serif;
 
     .footertabs {
         @include display-flex;
+        @include tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+        };
         @include mobile {
             flex-wrap: wrap;
             margin-left: -20px;
@@ -112,6 +116,9 @@ $project-serif: 'Teko', $philly-serif;
 
             cursor: pointer;
             @include transition(all .5s ease);
+            @include tablet {
+                    @include flex(0 0 30%);
+            };
             @include mobile {
                 padding: 10px;
                 @include flex(1 1 100%);
@@ -132,8 +139,8 @@ $project-serif: 'Teko', $philly-serif;
                 letter-spacing: 2px;
                 @include flex(1 1 100%);
                 @include mobile {
-                    font-size: 22px;
-                    letter-spacing: 0.5px;
+                    font-size: 17px;
+                    letter-spacing: 1.5px;
                 };
             }
 
