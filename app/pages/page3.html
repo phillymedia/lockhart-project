@@ -1,3 +1,7 @@
+{% set page = "page3" %}
+{% set headline = "Another Twist, Another Crime Scene" %}
+{% set subhead = "Day 3" %}
+
 {% extends "pagetemplate.html" %} {% block styles %}
 <!--removeIf(production)-->
 <!--build:css min-files/styles.min.css-->
@@ -7,13 +11,17 @@
 <!--endRemoveIf(production)-->
 {% endblock %}
 
+{% block heroimage %}
+<img src="./assets/hospital2_fpo.jpg" alt="">
+{% endblock %}
+
 
 {% block headercontent %}
 
 <div class="headerIntro">
     <div class="heroImage"><img src="./assets/hospital2_fpo.jpg" alt=""></div>
 </div>
-<h1>Undercover Gangster Part 3: Another Twist, Another Crime Scene</h1>
+<h1>Undercover Gangster Part 3: </h1>
 
 {% endblock %}
 

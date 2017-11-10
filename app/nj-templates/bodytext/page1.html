@@ -3,14 +3,14 @@
     <div class="col-md-6 col col-md-offset-3" alignment="true">
       <div class="byline-section">
         <div class="byline">
-          Jeff McLane / Staff Writer, <a href="mailto:jmclane@phillynews.com">jmclane@phillynews.com</a>
+          By David Gambacorta<br><a href="mailto:dgambacorta@philly.com">dcambacorta@philly.com</a>
           <div style="float:right;" class="custom-social-share" alignment="true">&nbsp;</div>
         </div>
         <div class="dateline">Pub date, Xxx. ##, 2017</div>
       </div>
 
-      <div class="subHead">Day One: Fathers and Sons</div>
-      <p class=""><span class="imgDrop">D</span>etective Joe Murray lumbered toward the Justice Juanita Kidd Stout Center for Criminal Justice on a steamy mid-August morning in 2015.</p>
+      <!-- <div class="subHead">Day One: Fathers and Sons</div> -->
+      <p class=""><span class="imgDrop letterD">D</span>etective Joe Murray lumbered toward the Justice Juanita Kidd Stout Center for Criminal Justice on a steamy mid-August morning in 2015.</p>
       <p>The 17-story building, planted a few blocks from City Hall, practically oozed misery from its cheerless gray exterior.</p>
       <p>Cops, prosecutors, defense attorneys, and relatives of victims and defendants jostled for space near a handful of lobby elevators, bracing for the slow, uncomfortable ride that awaited them all. Stragglers smoked cigarettes outside in the 91-degree
         heat.
@@ -24,7 +24,7 @@
 
 
         <!-- "left, center, right", "width", "opactiy", "boot", image"  -->
-        {% set absolute = ["illustration_1", "right", "50%", "0.8", "./assets/lockhart_day1_g.jpg","data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
+        {% set absolute = ["illustration_1", "right", "50%", "0.8", "./assets/lockhart_day1_g.jpg","data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
 
 
 
@@ -50,15 +50,8 @@
 
 
       <p>Murray drove out to the scene, a sloping, tree-lined block of apartments and houses with wide front porches and brick columns that climbed to the second floor. His eyes fell to 21 scattered shell casings, shimmering in the sun.</p>
-    </div>
-  </div>
-  <div class="row" alignment="true">
-    <div class="col-md-8 col col-md-offset-2" alignment="true">
-      <img src="./assets/lockhart_day1_b.jpg">
-    </div>
-  </div>
-      <div class="row" alignment="true">
-        <div class="col-md-6 col col-md-offset-3" alignment="true">
+
+
 
       <!-- "left, center, right", "width", "image"  -->
       <!-- {% set inline = ["illustration_2", "center", "100%","1","", "./assets/daylight_fpo.jpg"] %} {% include "partials/inline-illustration.html" %} -->
@@ -71,20 +64,20 @@
       <p>&ldquo;Holy s&mdash;,&rdquo; he muttered.</p>
       <p>There was one victim, a 31-year-old named Lawrence Downs, who by then had been raced in the back of a police cruiser to the Hospital of the University of Pennsylvania.</p>
 
-      <p>When Murray reached an official at the hospital, he was told that Downs was lost in a coma. He had been hit 14 times at close range.</p>
 
+      <!-- "left, center, right", "width", "opactiy", "boot", image"  -->
+      {% set absolute = ["illustration_3", "left", "30%", "0.8", "./assets/lockhart_day1_e.jpg","data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
+
+
+
+
+
+
+      <p>When Murray reached an official at the hospital, he was told that Downs was lost in a coma. He had been hit 14 times at close range.</p>
       <p>Philly&rsquo;s trauma centers work miracles every day, but it didn&rsquo;t seem like Downs would be one of them. Murray figured the case would soon end up in the hands of a Homicide detective. He contacted the Crime Scene Unit and told them to get
         someone out to Angora Terrace to start preserving evidence.</p>
 
-
-
       <p>But a week later, Murray got an unexpected call from doctors at HUP. Lawrence Downs hadn&rsquo;t become another entry in the city&rsquo;s murder tally. He was alive &mdash; and now, miraculously, awake. Not only that, he was asking for a cop.</p>
-
-      <!-- "left, center, right", "width", "opactiy", "boot", image"  -->
-      {% set absolute = ["illustration_3", "left", "30%", "0.8", "./assets/lockhart_day1_e.jpg","data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
-
-
-
       <p>Downs wanted to talk about the men who shot him.</p>
       <!-- <p>&bull;</p> -->
       <!-- <div class="section-break">§</div> -->
@@ -103,7 +96,7 @@
 
       <p>After the show-and-tell, Foster carefully returned the guns to a hiding spot on the second floor of his house. Michael hung around until midnight, then left with another friend.</p>
       <!-- "left, center, right", "width", "image"  -->
-      {% set absolute = ["illustration_3", "right", "40%","0.8", "./assets/lockhart_day1_f.jpg", "data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
+      {% set absolute = ["illustration_3", "right", "40%","0.8", "./assets/lockhart_day1_f.jpg", "data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
 
 
 
@@ -114,14 +107,13 @@
         above his family&rsquo;s legacy of chaos and crime.</p>
       <p>Lockhart liked to believe they were right. He devoted some of his free time to volunteering with Philadelphia Ceasefire, lecturing young people about the senselessness of gun violence. It was like therapy, in a sense, an exercise to convince him
         to stay on the straight and narrow.</p>
-        {% set quote = ["My life is on the line. I gotta get these guns back!", ""] %} {% include "partials/left-quote.html" %}
-
       <p>His phone buzzed. It was Foster.</p>
       <p>&ldquo;Where the guns at?&rdquo; Foster shrieked.</p>
 
 
       <p>&ldquo;I don&rsquo;t know,&rdquo; Michael said.</p>
 
+      {% set quote = ["My life is on the line. I gotta get these guns back!", ""] %} {% include "partials/left-quote.html" %}
 
       <p>&ldquo;My life is on the line,&rdquo; Foster sputtered. &ldquo;I gotta get these guns back!&rdquo;</p>
       <p>He could tell that Foster was sick with worry, and calmly assured him that everything would work out just fine. What Michael&nbsp;<em>didn&rsquo;t</em>&nbsp;say was that he had Brooks&rsquo; guns.</p>
@@ -146,7 +138,7 @@
 
 
       <!-- "left, center, right", "width", "image"  -->
-      {% set absolute = ["illustration_4", "left", "55%","0.8", "./assets/lockhart_guns_fpo.jpg", "data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
+      {% set absolute = ["illustration_4", "left", "55%","0.8", "./assets/lockhart_guns_fpo.jpg", "data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
 
 
       <p>But after shaking hands with Casey and the other suits, Michael Lockhart slipped back into the soap opera about the missing guns. To this point, he hadn&rsquo;t been much more than a glorified bench player in Brooks&rsquo; gang. His father and namesake
@@ -159,6 +151,8 @@
       <p>Their death warrants, in other words, had been signed.</p>
       <p>On the morning of Aug. 18 &mdash; seven days after Brooks&rsquo; guns vanished &mdash; his underlings decided it was time to collect. They agreed to kill Downs first.</p>
 
+            <!-- "left, center, right", "width", "image"  -->
+            {% set absolute = ["illustration_5", "right", "40%","0.8", "./assets/cycling_fpo.jpg", "data-aos=fade  data-aos-duration=2000"] %} {% include "partials/absolute-illustration.html" %}
 
       <p>Lockhart&nbsp;was dressed in a white T-shirt, camouflage pants and New Balance track sneakers. He huddled behind bushes on Angora Terrace with a handful of accomplices: Michael &ldquo;Spazz&rdquo; Smith-Davis, Kasheem &ldquo;Nu Nu&rdquo; Brown,
         and James &ldquo;JB&rdquo; Booker. They were locked, loaded, and ready to pounce.</p>
@@ -169,8 +163,6 @@
       <p>Downs came rolling down the street on his bicycle and noticed a flurry of movement out of the corner of his eyes. Michael stepped forward first,&nbsp;lifted&nbsp;his .40-caliber handgun and started firing. The others followed. Gunshots exploded
         in a furious barrage, like the final gasps of a fireworks display on the Fourth of July. The bullets ripped into Downs&rsquo; body, knocking him off his bike. He tumbled to the hot asphalt, and watched the gunmen draw closer. They were practically
         standing on top of him as they continued to fire.</p>
-        <!-- "left, center, right", "width", "image"  -->
-        {% set absolute = ["illustration_5", "right", "40%","0.8", "./assets/cycling_fpo.jpg", "data-aos=fade"] %} {% include "partials/absolute-illustration.html" %}
 
 
       <p>A neighbor ran to his side after the shooters scattered. Downs choked out four words: &ldquo;Go get my mom.&rdquo; He stayed awake long enough to see his mother step outside and faint.</p>

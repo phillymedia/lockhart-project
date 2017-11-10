@@ -1,5 +1,5 @@
 @import '../philly-styles/values';
-
+$project-serif: 'Teko', $philly-serif;
 
 
 #backgroundImage-1 {
@@ -13,22 +13,79 @@
 }
 
 
+// .headerIntro {
+//     position: relative;
+//     display: block;
+//     height: 100%;
+//     @include display-flex;
+//     margin-bottom: 50px;
+//
+//     .heroText {
+//         position: absolute;
+//         display: block;
+//         height: 100%;
+//
+//     }
+//
+//     h1 {
+//         padding-top: 25%;
+//         position: relative;
+//     }
+// }
+
 .headerIntro {
-    position: relative;
-    display: block;
-    height: 100%;
-    @include display-flex;
-    margin-bottom: 50px;
 
     .heroText {
-        position: absolute;
-        display: block;
-        height: 100%;
+        @include flex(1 1 20%);
+        margin-right: 0;
+    }
 
+    .heroImage {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        order: 2;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: auto;
+        @include flex(1 1 50%);
+        @include mobile {
+             @include flex(1 1 100%);
+            order: 2;
+            margin-top: -60px;
+        };
     }
 
     h1 {
-        padding-top: 25%;
-        position: relative;
+
+        bottom: 0;
+        margin-bottom: 0;
+        width: auto;
+        left: 50%;
+        @include transform(translateX(-50%));
+        @include tablet {
+            font-size: 60px;
+            font-size: 8.5vw;
+            bottom: 0;
+        };
+        @include mobile {
+            display: none;
+        };
+    }
+
+    .mobilehead {
+        display: none;
+        @include mobile {
+            padding-left: 20px;
+            display: block;
+            position: relative;
+            bottom: inherit;
+            font-size: 50px;
+            max-width: none;
+            order: 4;
+            font-size: 55px;
+            margin-bottom: 0;
+            padding-top: 20px;
+        };
     }
 }
