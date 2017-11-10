@@ -466,8 +466,7 @@ $project-serif: 'Teko', $philly-serif;
         height: 15px;
 
         &::after {
-          // left: 0;
-          right: 5px;
+          right: 2px;
           bottom: 0;
           top: 0;
           content: "";
@@ -475,10 +474,11 @@ $project-serif: 'Teko', $philly-serif;
           height: 120%;
           position: absolute;
           background-repeat: no-repeat;
-          background-image: url('http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-break-1.jpg');
-          background-size: 100% 100%;
+          background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-marker-3.svg");
           background-position: center right;
           mix-blend-mode: darken;
+          background-size: contain;
+          opacity: 0.8;
         }
       }
     }
