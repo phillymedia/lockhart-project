@@ -51,7 +51,9 @@ $project-serif: 'Teko', $philly-serif;
 }
 
 .illustration {
+  @include tablet {
     padding:10px 0 30px;
+  }
 }
 
 .illustration.absolute.left {
@@ -514,7 +516,7 @@ $project-serif: 'Teko', $philly-serif;
 }
 
 .letterD {
-    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day1/D.jpg");
+    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day1/comp_lockhart_D.jpg");
     padding-right: 0px;
 }
 

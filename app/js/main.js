@@ -2,6 +2,7 @@ var _ = require('lodash');
 var AOS = require('aos');
 
 $(document).ready(function() {
+
     // if ($(".content").attr("class").includes("is-subscriber")) {
     //     console.log("subscriber")
     //     $(".content").css("padding-top","0")
@@ -41,14 +42,49 @@ $(document).ready(function() {
         disable: 'mobile'
     });
 
-    $(window).bind('scroll', function(e) {
-        parallaxScroll();
-    });
+  
+  var winScrollTop=0;
 
-    function parallaxScroll() {
-        var scrolled = $(window).scrollTop();
-        $('.illustration-wrapper').css('top', (0 - (scrolled * .1)) + 'px');
-    }
+  $.fn.is_on_screen = function(){
+      var win = $(window);
+      var viewport = {
+          top : win.scrollTop(),
+          left : win.scrollLeft()
+      };
+      //viewport.right = viewport.left + win.width();
+      viewport.bottom = viewport.top + win.height();
+
+      var bounds = this.offset();
+      //bounds.right = bounds.left + this.outerWidth();
+      bounds.bottom = bounds.top + this.outerHeight();
+
+      return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+  };
+
+  function parallax() {
+    var scrolled = $(window).scrollTop();
+    $('.illustration-wrapper').each(function(){
+
+    	 if ($(this).is_on_screen()) {
+    	 			var firstTop = $(this).offset().top;
+            var $span = $(this);
+            var moveTop = (firstTop-winScrollTop)*0.2 //speed;
+            // $span.css("transform","translateY("+-moveTop+"px)");
+            $span.css("top", (moveTop));
+       }
+
+    });
+  }
+
+  $(window).scroll(function(e){
+    winScrollTop = $(this).scrollTop();
+    parallax();
+  });
+  
+
+    });
+  }
+
 
 
 
@@ -128,3 +164,4 @@ $(window).resize(function() {
         })
     }
 })
+
