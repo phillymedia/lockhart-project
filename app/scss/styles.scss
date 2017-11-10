@@ -5,29 +5,32 @@
 $project-serif: 'Teko', $philly-sans;
 
 .trigger {
-    visibility: hidden;
-    @include desktop {
-        display: none;
-    }
+
+  visibility: hidden;
+  @include desktop {
+    display: none;
+  }
 }
 
 .sticky {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    display: none;
-    opacity: 0.8;
-    @include desktop {
-        position: relative;
-        display: block;
-    }
-    @include tablet {
-        opacity: 1;
-        max-width: 100% !important;
-    }
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  display: none;
+  opacity: 0.8;
+  @include desktop {
+    position: relative;
+    display: block;
+  }
+  @include tablet {
+    opacity: 1;
+    max-width: 100% !important;
+  }
 }
+
+
 
 .adUnitWrapper-center {
     width: 100%;
@@ -85,6 +88,20 @@ $project-serif: 'Teko', $philly-sans;
     }
 }
 
+.illustration.absolute {
+  position: absolute;
+  z-index: -1;
+  @include desktop {
+    position: relative;
+  }
+  @include tablet {
+    position: relative;
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+}
+
+
 .illustration {
     padding: 10px 0 30px;
 }
@@ -104,12 +121,14 @@ $project-serif: 'Teko', $philly-sans;
 }
 
 .illustration.inline {
+
+  position: relative;
+  @include tablet {
     position: relative;
-    @include tablet {
-        position: relative;
-        width: 100% !important;
-        opacity: 1 !important;
-    }
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+
 }
 
 .illustration.inline.left {
