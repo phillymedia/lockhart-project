@@ -101,35 +101,46 @@ $(document).ready(function() {
                 }
             }
         }
+
         lastScrollTop = st;
 
-        if ($(".byline-section").offset().top + $(window).height() / 2 < $(window).scrollTop() && $(".footerNav").offset().top - $(window).height() * 1.5 > $(window).scrollTop()) {
-            if ($(".stickynav").length < 1) {
-                $("body").append('<div class="stickynav" id="invnav-rail"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></div><div class="part notready"><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></div><div class="part notready"><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></div><div class="part notready"><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></div><div class="part notready"><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></div></div></div>')
+        if($(window).scrollTop() < $(".byline-section").offset().top + $(window).height() / 2) {
+            if($(".stickynav").length > 0) {
+                setTimeout(function() {
+                       $(".stickynav").remove();
+                   }, 1000);
+                   $(".stickyheader").addClass("stickyOut");
             }
-            $(".stickynav").hover(
-                function() {
-                    $(this).find(".menu").addClass("stickyShow");
-                    setTimeout(function() {
-                        $(".stickyShow").css("opacity", "1");
-                    }, 100);
 
-                },
-                function() {
-                    setTimeout(function() {
-                        $(".stickyShow").removeClass("stickyShow");
-                    }, 500);
-                    $(".stickyShow").css("opacity", "");
-
+        } else if($(window).scrollTop() >= $(".byline-section").offset().top + $(window).height() / 2 && $(window).scrollTop() < $(".footerNav").offset().top - $(window).height() * 1.5) {
+                if ($(".stickynav").length < 1) {
+                    $("body").append('<div class="stickynav" id="invnav-rail"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></div><div class="part notready"><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></div><div class="part notready"><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></div><div class="part notready"><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></div><div class="part notready"><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></div></div></div>')
                 }
-            );
-        } else {
-            setTimeout(function() {
-                $(".stickynav").remove();
-            }, 1000);
-            $(".stickyheader").addClass("stickyOut");
+                $(".stickynav").hover(
+                    function() {
+                        $(this).find(".menu").addClass("stickyShow");
+                        setTimeout(function() {
+                            $(".stickyShow").css("opacity", "1");
+                        }, 100);
 
+                    },
+                    function() {
+                        setTimeout(function() {
+                            $(".stickyShow").removeClass("stickyShow");
+                        }, 500);
+                        $(".stickyShow").css("opacity", "");
+
+                    }
+                );
+        } else if($(window).scrollTop() >= $(".footerNav").offset().top - $(window).height() * 1.5) {
+            if($(".stickynav").length > 0) {
+                setTimeout(function() {
+                       $(".stickynav").remove();
+                   }, 1000);
+                   $(".stickyheader").addClass("stickyOut");
+            }
         }
+
     }
 });
 

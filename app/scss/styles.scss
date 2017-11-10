@@ -595,6 +595,7 @@ $project-serif: 'Teko', $philly-sans;
   background-repeat: no-repeat;
   padding: 0 50px 50px;
   margin-top: -8px;
+  text-shadow: none !important;
 }
 
 .letterD {
@@ -730,6 +731,9 @@ $project-serif: 'Teko', $philly-sans;
     display: inline-block;
     font-size: 80%;
   };
+}
+p {
+        text-shadow: -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff, 1px 1px 2px #fff;
 }
 
 .container p {
