@@ -602,6 +602,17 @@ $project-serif: 'Teko', $philly-sans;
   background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day1/D.jpg");
   padding-right: 0;
 }
+.letterM {
+    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/M.jpg");
+    padding-right: 0;
+}
+
+.pbreak {
+    margin-top: 100px;
+    @include mobile {
+        margin-top: 50px;
+    };
+}
 @include keyframes(stickyFade) {
   0% {
     opacity: 0;
