@@ -293,6 +293,7 @@ $project-serif: 'Teko', $philly-serif;
         position: absolute;
         bottom: 0;
         width: auto;
+        left: 30px;
         @include tablet {
             font-size: 60px;
             font-size: 8.5vw;
@@ -300,6 +301,7 @@ $project-serif: 'Teko', $philly-serif;
         };
         @include mobile {
             display: none;
+            left: inherit;
         };
         @include BS-large {
             bottom: 20%;
