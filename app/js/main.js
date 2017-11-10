@@ -38,7 +38,7 @@ $(document).ready(function() {
         duration: 2000,
         offset: -50,
         anchor: "center-bottom",
-        disable: 'mobile'
+        disable: window.innerWidth < 1000
     });
 
     var winScrollTop = 0;
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
   function parallax() {
     var scrolled = $(window).scrollTop();
-    $('.illustration-wrapper').each(function() {
+    $('.illustration-absolute').each(function() {
 
       if ($(this).is_on_screen()) {
         var firstTop = $(this).offset().top;
