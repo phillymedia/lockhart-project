@@ -488,6 +488,9 @@ $project-serif: 'Teko', $philly-sans;
                     &:hover {
                         text-decoration: none;
                     }
+                    &:focus {
+                        text-decoration: none;
+                    }
                 }
             }
 
@@ -718,6 +721,7 @@ $project-serif: 'Teko', $philly-sans;
 
             .notready {
                 color: #666;
+                pointer-events: none;
 
                 .pubdate {
                     &::before {
@@ -797,6 +801,9 @@ p {
 .part a {
     color: inherit !important;
     &:hover {
+        text-decoration: none !important;
+    }
+    &:focus {
         text-decoration: none !important;
     }
 }
