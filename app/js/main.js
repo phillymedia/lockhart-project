@@ -6,6 +6,7 @@ $(document).ready(function() {
     //     console.log("subscriber")
     //     $(".content").css("padding-top","0")
     // }
+    $("body").append('<link href="https://fonts.googleapis.com/css?family=Teko:300,400,700" rel="stylesheet">')
     if ($(".content").attr("class").includes("is-subscriber")) {
         console.log('logged in')
     } else {

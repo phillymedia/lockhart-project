@@ -49,6 +49,7 @@ $project-serif: 'Teko', $philly-serif;
         margin-right: 0;
         margin-left: auto;
         @include flex(1 1 50%);
+        min-height: 650px;
         @include mobile {
              @include flex(1 1 100%);
             order: 2;
@@ -61,12 +62,16 @@ $project-serif: 'Teko', $philly-serif;
         bottom: 0;
         margin-bottom: 0;
         width: auto;
-        left: 50%;
-        @include transform(translateX(-50%));
+        max-width: 300px;
+        // left: 50%;
+        // @include transform(translateX(-50%));
         @include tablet {
             font-size: 60px;
             font-size: 8.5vw;
             bottom: 0;
+            width: 100vw;
+            left: 30px;
+            @include transform(none);
         };
         @include mobile {
             display: none;

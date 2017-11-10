@@ -1,5 +1,5 @@
 @import 'philly-styles/values'; // illustration partial
-$project-serif: 'Teko', $philly-serif;
+$project-serif: 'Teko', $philly-sans;
 
 .footerNav {
   overflow: hidden;
@@ -221,7 +221,7 @@ $project-serif: 'Teko', $philly-serif;
             font-weight: 100;
             color: gray;
             @include mobile {
-                font-size: 16px;
+                font-size: 13px;
 
             };
         }
@@ -230,7 +230,10 @@ $project-serif: 'Teko', $philly-serif;
         font-size: 14px;
         @include tablet {
             padding: 1px 10px;
-            font-size: 13px;
+            font-size: 14px;
+        };
+        @include mobile {
+            text-align: center;
         };
     }
 }
