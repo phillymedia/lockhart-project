@@ -210,6 +210,7 @@ $project-serif: 'Teko', $philly-serif;
 }
 
 .headerIntro {
+  overflow: hidden;
     position: relative;
     display: block;
     height: 100%;
@@ -265,6 +266,18 @@ $project-serif: 'Teko', $philly-serif;
             height: auto;
         }
     }
+    .prehead {
+      display: block;
+      font-weight: 100;
+      font-family: $philly-sans;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      @include mobile {
+          font-size: 32px;
+      };
+
+    }
 
     h1 {
         font-family: 'Teko', $philly-serif;
@@ -275,6 +288,7 @@ $project-serif: 'Teko', $philly-serif;
         position: absolute;
         bottom: 20%;
         width: auto;
+        // margin-top: 0;
         // left: 50%;
         // @include transform(translateX(-50%));
         @include tablet {
@@ -399,7 +413,7 @@ $project-serif: 'Teko', $philly-serif;
                 font-family: $philly-sans;
                 font-weight: 100;
                 font-size: 14px;
-                color: gray;
+                color: black;
                 @include mobile {
                     line-height: 1.1;
                     color: black;
@@ -435,9 +449,13 @@ $project-serif: 'Teko', $philly-serif;
         }
 
         .notready {
-            color: #666;
+          .name {
+            color: #adadad;
+
+          }
 
             .pubdate {
+              color: #666;
                 &::before {
                     content: "COMING ";
                 }

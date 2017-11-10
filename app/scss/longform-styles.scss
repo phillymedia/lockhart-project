@@ -208,7 +208,7 @@
 }
 
 .byline {
-    line-height: 2.25em;
+    // line-height: 2.25em;
     top: 15px;
     font-family: $philly-sans;
     color: #777;
@@ -219,6 +219,7 @@
 }
 
 .dateline {
+  padding-top: 20px;
     font-family: $philly-sans;
     color: #777777;
     font-size: 12px;
