@@ -40,6 +40,13 @@ $project-serif: 'Teko', $philly-serif;
         margin-right: 0;
     }
 
+    .heroNav {
+        min-width: 320px;
+        @include tablet {
+            min-width: 280px;
+        };
+    }
+
     .heroImage {
         width: 100%;
         margin: 0;
@@ -47,13 +54,25 @@ $project-serif: 'Teko', $philly-serif;
         order: 2;
         margin-top: 0;
         margin-right: 0;
-        margin-left: auto;
+        margin-left: -15%;
         @include flex(1 1 50%);
         min-height: 650px;
+        @include tablet {
+            @include flex(1 1 20%);
+            margin-left: -46%;
+            min-height: 0;
+            margin-bottom: 120px;
+        };
         @include mobile {
              @include flex(1 1 100%);
+             margin-bottom: 0;
+             margin-left: 0;
             order: 2;
             margin-top: -60px;
+            margin-top: 15px;
+        };
+        @include BS-medium {
+            margin-left: auto;
         };
     }
 
@@ -62,7 +81,7 @@ $project-serif: 'Teko', $philly-serif;
         bottom: 0;
         margin-bottom: 0;
         width: auto;
-        max-width: 300px;
+        max-width: 50%;
         // left: 50%;
         // @include transform(translateX(-50%));
         @include tablet {
@@ -71,10 +90,16 @@ $project-serif: 'Teko', $philly-serif;
             bottom: 0;
             width: 100vw;
             left: 30px;
+            margin-top: 0;
+            max-width: none;
             @include transform(none);
         };
         @include mobile {
             display: none;
+            left: 0;
+        };
+        @include BS-medium {
+            max-width: 300px;
         };
     }
 
