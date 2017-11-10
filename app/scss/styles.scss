@@ -2,7 +2,7 @@
 @import 'philly-styles/values';
 @import 'footer.scss';
 @import 'aos.scss';
-$project-serif: 'Teko', $philly-serif;
+$project-serif: 'Teko', $philly-sans;
 
 .adUnitWrapper-center {
   width: 100%;
@@ -146,7 +146,7 @@ $project-serif: 'Teko', $philly-serif;
 }
 
 .containerQuoteText {
-  font-family: 'Teko', $philly-serif;
+  font-family: $project-serif;
   font-weight: 400;
   line-height: 1.25em;
   font-size: 36px;
@@ -285,7 +285,7 @@ $project-serif: 'Teko', $philly-serif;
   }
 
   h1 {
-    font-family: 'Teko', $philly-serif;
+    font-family: $project-serif;
     font-weight: 700;
     font-size: 8vw;
     line-height: 0.8em;
@@ -315,7 +315,7 @@ $project-serif: 'Teko', $philly-serif;
     display: inline-block;
     // margin: 0 auto;
     .title {
-      font-family: 'Teko', $philly-serif;
+      font-family: $project-serif;
       font-weight: 700;
       font-size: 40px;
       line-height: 0.8em;
@@ -391,7 +391,7 @@ $project-serif: 'Teko', $philly-serif;
     }
 
     .part {
-      font-family: 'Teko', $philly-serif;
+      font-family: $project-serif;
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -466,8 +466,7 @@ $project-serif: 'Teko', $philly-serif;
         height: 15px;
 
         &::after {
-          // left: 0;
-          right: 5px;
+          right: 2px;
           bottom: 0;
           top: 0;
           content: "";
@@ -475,10 +474,11 @@ $project-serif: 'Teko', $philly-serif;
           height: 120%;
           position: absolute;
           background-repeat: no-repeat;
-          background-image: url('http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-break-1.jpg');
+          background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-marker-3.svg");
           background-size: 100% 100%;
           background-position: center right;
-          mix-blend-mode: darken;
+          background-size: contain;
+           opacity: 0.8;
         }
       }
     }
@@ -675,8 +675,7 @@ $project-serif: 'Teko', $philly-serif;
 
 .container p {
   a {
-    font-family: $project-serif;
-    font-size: 105%;
+      background: #f9f5d8;
     cursor: pointer;
     color: #000;
     box-shadow: inset -2px -5px 0 -2px #e8e3be;
@@ -686,7 +685,22 @@ $project-serif: 'Teko', $philly-serif;
 
 .container p {
   a:hover {
-    box-shadow: inset -2px -30px 0 -3px rgba(#f9f5d8,0.8);
+    box-shadow: inset -2px -30px 0 -3px rgba(#e8e3be,0.8);
     text-decoration: none;
   }
+}
+
+.comingtomorrow {
+    margin-top: 100px;
+    font-style: italic;
+    .title {
+        font-family: $project-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 22px;
+        display: block;
+        font-style: normal;
+
+    }
 }
