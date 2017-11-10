@@ -2,6 +2,7 @@
 $project-serif: 'Teko', $philly-serif;
 
 .footerNav {
+  overflow: hidden;
     padding: 50px 8% 0;
     margin-top: 100px;
     position: relative;
@@ -107,6 +108,8 @@ $project-serif: 'Teko', $philly-serif;
             // background: #222;
             padding: 15px;
             margin: 5px;
+            border: 1px solid #ddd;
+
             cursor: pointer;
             @include transition(all .5s ease);
             @include mobile {
@@ -147,12 +150,14 @@ $project-serif: 'Teko', $philly-serif;
         .selected {
             background: #f9f5d8;
             color: black;
+            border: none;
         }
 
         .notready {
             // background: #ddd;
-            border: 1px solid #ddd;
             pointer-events: none;
+              color: #adadad;
+
 
             .pubdate {
                 &::before {
