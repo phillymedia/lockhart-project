@@ -420,7 +420,7 @@ $project-serif: 'Teko', $philly-serif;
 
             .name {
                 font-family: $philly-sans;
-                font-weight: 100;
+                font-weight: 300;
                 font-size: 14px;
                 color: black;
                 @include mobile {
@@ -521,6 +521,7 @@ $project-serif: 'Teko', $philly-serif;
     100%{opacity: 1}
 };
 .stickynav {
+    @include transition(all .5s ease);
     display: none;
     @include BS-medium {
         background: rgba(white,0.9);
@@ -628,4 +629,9 @@ $project-serif: 'Teko', $philly-serif;
         }
     };
 
+}
+
+.stickyOut {
+    @include animation(stickyFade .5s ease forwards);
+    animation-direction: reverse;
 }

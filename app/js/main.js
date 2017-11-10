@@ -6,16 +6,21 @@ $(document).ready(function() {
     //     console.log("subscriber")
     //     $(".content").css("padding-top","0")
     // }
+    if($(".content").attr("class").includes("is-subscriber")) {
+        console.log('logged in')
+    }else {
+        $(".content").css("margin-top",$(".header").height())
+    }
     $(window).trigger('resize');
 
     AOS.init({
         easing: "ease",
         once: "true",
         duration: 2000,
-        offset:-50,
+        offset: -50,
         anchor: "center-bottom",
         disable: 'mobile'
-      });
+    });
 
     $(window).bind('scroll', function(e) {
         parallaxScroll();
@@ -27,7 +32,7 @@ $(document).ready(function() {
     }
 });
 
-$(window).resize(function(){
+$(window).resize(function() {
     if ($(window).width() <= 520) {
         $(".heroNav").hover(
             function() {
@@ -66,8 +71,10 @@ function slowscroll() {
     }
     lastScrollTop = st;
 
-console.log($(".footerNav").offset().top - $(window).height()*1.5, $(window).scrollTop())
-    if ($(".byline-section").offset().top + $(window).height()/2 <= $(window).scrollTop() && $(".footerNav").offset().top - $(window).height()*1.5  > $(window).scrollTop()) {
+
+    // console.log($(".footerNav").offset().top - $(window).height()*1.5, $(window).scrollTop())
+    if ($(".byline-section").offset().top + $(window).height() / 2 <= $(window).scrollTop() && $(".footerNav").offset().top - $(window).height() * 1.5 > $(window).scrollTop()) {
+
         if ($(".stickynav").length < 1) {
             $("body").append('<div class="stickynav"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></div><div class="part notready"><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></div><div class="part notready"><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></div><div class="part notready"><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></div><div class="part notready"><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></div></div></div>')
         }
@@ -88,7 +95,11 @@ console.log($(".footerNav").offset().top - $(window).height()*1.5, $(window).scr
             }
         );
     } else {
-        $(".stickynav").remove();
+
+        setTimeout(function() {
+                $(".stickynav").remove();
+        }, 1000);
+        $(".stickyheader").addClass("stickyOut");
 
     }
 }
