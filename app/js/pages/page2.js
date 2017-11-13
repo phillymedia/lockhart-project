@@ -8,9 +8,9 @@ $(document).ready(function() {
             release3 = $("#illustration_3-trigger-release").offset().top;
         $window.scroll(function() {
 
-            console.log(distance, $window.scrollTop(), release3);
+            // console.log(distance, $window.scrollTop(), release3);
             if ($window.scrollTop() >= distance && $window.scrollTop() <= release3) {
-                console.log("fire");
+                // console.log("fire");
                 $('.sticky').fadeIn("slow");
             } else {
                 $('.sticky').fadeOut("slow");
