@@ -1,5 +1,6 @@
 console.log('page 2')
 
+
 // $(window).resize(function() {
 $(document).ready(function() {
 
@@ -20,6 +21,7 @@ console.log("test " + $('#illustration_3-trigger').offset().top);
     });
   }
 });
+
 
 
 

@@ -114,6 +114,10 @@ $project-serif: 'Teko', $philly-sans;
             margin: 5px;
             border: 1px solid #ddd;
 
+            a {
+                @include flex(1 1 100%);
+            }
+
             cursor: pointer;
             @include transition(all .5s ease);
             @include tablet {

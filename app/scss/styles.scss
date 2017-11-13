@@ -5,6 +5,7 @@
 $project-serif: 'Teko', $philly-sans;
 
 .trigger {
+
   visibility: hidden;
   @include desktop {
     display: none;
@@ -32,46 +33,59 @@ $project-serif: 'Teko', $philly-sans;
 
 
 .adUnitWrapper-center {
-  width: 100%;
-  margin: 40px 0;
+    width: 100%;
+    margin: 40px 0;
 }
 
 .adUnit {
-  margin: 0 auto;
+    margin: 0 auto;
 }
 
 .section-break {
-  width: 100%;
-  // border-bottom: 2px solid #ddd;
-  margin: 80px 0;
-  text-align: center;
-  font-size: 40px;
+    width: 100%;
+    // border-bottom: 2px solid #ddd;
+    margin: 80px 0;
+    text-align: center;
+    font-size: 40px;
 }
 
 .section-break img {
-  opacity: 0.8;
-  width: 100px;
+    opacity: 0.8;
+    width: 100px;
 }
 
 .illustration-wrapper {
-  position: relative;
-  width: 100%;
-  @include desktop {
-    top: 0 !important;
-  }
+    position: relative;
+    width: 100%;
+    @include desktop {
+        top: 0 !important;
+    }
 }
 
 .illustration.absolute {
-  position: absolute;
-  z-index: -1;
-  @include desktop {
-    position: relative;
-  }
-  @include tablet {
-    position: relative;
-    width: 100% !important;
-    opacity: 1 !important;
-  }
+    position: absolute;
+    z-index: -1;
+    @include desktop {
+        position: relative;
+    }
+    @include tablet {
+        position: relative;
+        width: 100% !important;
+        opacity: 1 !important;
+    }
+}
+
+.illustration.absolute {
+    position: absolute;
+    z-index: -1;
+    @include desktop {
+        position: relative;
+    }
+    @include tablet {
+        position: relative;
+        width: 100% !important;
+        opacity: 1 !important;
+    }
 }
 
 .illustration.absolute {
@@ -89,676 +103,690 @@ $project-serif: 'Teko', $philly-sans;
 
 
 .illustration {
-  padding: 10px 0 30px;
+    padding: 10px 0 30px;
 }
 
 .illustration.absolute.left {
-  left: 0;
+    left: 0;
 }
 
 .illustration.absolute.center {
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .illustration.absolute.right {
-  right: 0;
+    right: 0;
 }
 
 .illustration.inline {
+
   position: relative;
   @include tablet {
     position: relative;
     width: 100% !important;
     opacity: 1 !important;
   }
+
 }
 
 .illustration.inline.left {
-  float: left;
-  margin-left: -20%;
-  margin-right: 20px;
-  @include tablet {
-    margin-left: 0;
-    margin-right: 10px;
-  }
-  @include mobile {
-    width: 100%;
-  }
+    float: left;
+    margin-left: -20%;
+    margin-right: 20px;
+    @include tablet {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .illustration.inline.center {
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-}
-
-.illustration.inline.right {
-  float: right;
-  margin-right: -20%;
-  margin-left: 20px;
-  @include tablet {
-    margin-right: 0;
-    margin-left: 10px;
-  }
-  @include mobile {
-    width: 100%;
-  }
-}
-
-.container {
-  position: relative;
-  z-index: 2;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    width: 70%;
-    height: 100%;
-    display: block !important;
     margin: 0 auto;
     left: 0;
     right: 0;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,ffffff+95&0+0,1+23,1+50,1+73,0+97 */
-    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 1%, rgba(255,255,255,0.6) 17%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.6) 83%, rgba(255,255,255,0.04) 95%, rgba(255,255,255,0) 97%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.04) 1%,rgba(255,255,255,0.6) 17%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.6) 83%,rgba(255,255,255,0.04) 95%,rgba(255,255,255,0) 97%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.04) 1%,rgba(255,255,255,0.6) 17%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.6) 83%,rgba(255,255,255,0.04) 95%,rgba(255,255,255,0) 97%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00ffffff', endColorstr='#00ffffff',GradientType=1 );
-    /* IE6-9 */
-    @include desktop {
-      display: none !important;
-      z-index: 0;
+}
+
+.illustration.inline.right {
+    float: right;
+    margin-right: -20%;
+    margin-left: 20px;
+    @include tablet {
+        margin-right: 0;
+        margin-left: 10px;
     }
-  }
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        width: 70%;
+        height: 100%;
+        display: block !important;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+1,ffffff+95&0+0,1+23,1+50,1+73,0+97 */
+        background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.04) 1%, rgba(255,255,255,0.6) 17%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0.6) 83%, rgba(255,255,255,0.04) 95%, rgba(255,255,255,0) 97%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.04) 1%,rgba(255,255,255,0.6) 17%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.6) 83%,rgba(255,255,255,0.04) 95%,rgba(255,255,255,0) 97%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.04) 1%,rgba(255,255,255,0.6) 17%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0.6) 83%,rgba(255,255,255,0.04) 95%,rgba(255,255,255,0) 97%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+        /* IE6-9 */
+        @include desktop {
+            display: none !important;
+            z-index: 0;
+        }
+    }
 }
 
 .containerQuote {
-  border-top: 5px solid #444;
-  border-bottom: none;
-  margin-left: -20%;
-  max-width: 60%;
-  @include desktop {
-    margin-left: 0;
-  }
-  @include tablet {
-    margin-left: 0;
-    max-width: 100%;
-  }
+    border-top: 5px solid #444;
+    border-bottom: none;
+    margin-left: -20%;
+    max-width: 60%;
+    @include desktop {
+        margin-left: 0;
+    }
+    @include tablet {
+        margin-left: 0;
+        max-width: 100%;
+    }
 }
 
 .containerQuoteText {
-  font-family: $project-serif;
-
-  font-weight: 400;
-  line-height: 1.25em;
-  font-size: 36px;
-  text-align: left !important;
-  text-transform: uppercase;
-  color: #444;
+    font-family: $project-serif;
+    font-weight: 400;
+    line-height: 1.25em;
+    font-size: 36px;
+    text-align: left !important;
+    text-transform: uppercase;
+    color: #444;
 }
 
 .containerQuoteSource {
-  color: #888;
-  font-family: $philly-sans;
-  font-size: 16px;
+    color: #888;
+    font-family: $philly-sans;
+    font-size: 16px;
 }
 //
 
 .header {
-  position: absolute !important;
+    position: absolute !important;
 }
 
 .subscribetoday__wrap {
-  position: absolute !important;
+    position: absolute !important;
 }
 @include keyframes(zoomIn) {
-  0% {
-    @include transform(translateY(-100%))
-  }
+    0% {
+        @include transform(translateY(-100%))
+    }
 
-  100% {
-    @include transform(translateY(0))
-  }
+    100% {
+        @include transform(translateY(0))
+    }
 };
 
 .scrollIn {
-  @include transform(translateY(-100%));
-  @include animation(zoomIn .5s ease forwards);
-  position: fixed !important;
+    @include transform(translateY(-100%));
+    @include animation(zoomIn .5s ease forwards);
+    position: fixed !important;
 }
 @include keyframes(zoomOut) {
-  0% {
-    @include transform(translateY(0))
-  }
+    0% {
+        @include transform(translateY(0))
+    }
 
-  100% {
-    @include transform(translateY(-100%))
-  }
+    100% {
+        @include transform(translateY(-100%))
+    }
 };
 
 .scrollOut {
-  @include transform(translateY(0));
-  @include animation(zoomOut .5s ease forwards);
-  position: fixed !important;
+    @include transform(translateY(0));
+    @include animation(zoomOut .5s ease forwards);
+    position: fixed !important;
 }
 
 .subHead {
-  font-weight: 100;
-  font-family: $philly-sans;
-  font-size: 22px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding-bottom: 20px;
-  @include mobile {
-    font-size: 32px;
-  };
-}
-
-.headerIntro {
-  overflow: hidden;
-  position: relative;
-  display: block;
-  height: 100%;
-  @include display-flex;
-  margin-bottom: 50px;
-  @include mobile {
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  };
-
-  .heroText {
-    order: 1;
-    @include flex(1 1 30%);
-    padding: 30px 0 30px 50px;
-    @include display-flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    align-content: flex-start;
-    margin-right: -50px;
-    position: relative;
-    z-index: 2;
-    @include tablet {
-       @include flex(1 1 40%);
-      padding-top: 20px;
-      margin-right: -50px;
-    };
-    @include mobile {
-       @include flex(1 1 100%);
-      margin: 0;
-      padding: 30px 0 0;
-    };
-  }
-
-  .heroImage {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    order: 2;
-    margin-top: -9%;
-    margin-right: -2.1%;
-    margin-left: auto;
-    @include flex(1 1 50%);
-    @include tablet {
-      min-height: 80vh;
-    };
-    @include mobile {
-       @include flex(1 1 100%);
-      order: 2;
-      margin-top: -10px;
-    };
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .prehead {
-    display: block;
     font-weight: 100;
     font-family: $philly-sans;
     font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    padding-bottom: 20px;
     @include mobile {
-      font-size: 22px;
-      letter-spacing: 2px;
-
+        font-size: 32px;
     };
-  }
+}
 
-  h1 {
-    font-family: $project-serif;
-    font-weight: 700;
-    font-size: 8vw;
-    line-height: 0.8em;
-    color: black;
-    position: absolute;
-    bottom: 0;
-    width: auto;
-    left: 30px;
-    @include tablet {
-      font-size: 60px;
-      font-size: 8.5vw;
-      bottom: 0;
-    };
-
+.headerIntro {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 100%;
+    @include display-flex;
+    margin-bottom: 50px;
     @include mobile {
-      display: none;
-      left: inherit;
-    };
-    @include BS-large {
-      bottom: 20%;
-
-    };
-    @include BS-medium {
-      bottom: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
     };
 
-  }
-
-  .heroNav {
-    display: inline-block;
-    // margin: 0 auto;
-    .title {
-
-      font-family: $project-serif;
-
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 0.8em;
-      color: black;
-      text-align: center;
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      letter-spacing: -.5px;
-      @include flex(0 1 auto);
-      align-self: flex-start;
-      padding-top: 20px;
-      position: relative;
-
-      &::after {
-        position: absolute;
-        content: "";
-        left: -20px;
-        right: -20px;
-        border-top: 1px solid #222;
-        bottom: 0;
-      }
-      @include tablet {
-        font-size: 26px;
-        letter-spacing: normal;
-        margin-bottom: 5px;
-        padding-bottom: 5px;
-
-        &::after {
-          content: "";
-          left: -5px;
-          right: -5px;
-          border-top: 1px solid #222;
-          bottom: 0;
-        }
-      };
-      @include mobile {
-        font-size: 30px;
-        letter-spacing: normal;
-        margin-bottom: 0;
-        cursor: pointer;
-        padding: 0;
-
-        &::after {
-          content: "";
-          left: 50px;
-          right: 50px;
-          border-top: 1px solid #222;
-          bottom: 0;
-        }
-      };
-    }
-    @include mobile {
-      display: block;
-      width: 100%;
-    };
-
-    .parts {
-      @include mobile {
-        opacity: 0;
-        @include transition(all .4s ease);
-        height: auto;
-        position: absolute;
-        display: none;
-        width: 100%;
-        padding: 0 20%;
-        background: rgba(white,0.95);
-      };
-    }
-
-    .dropDown {
-      @include transition(all .4s ease);
-      opacity: 1;
-    }
-
-    .part {
-
-      font-family: $project-serif;
-
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 40px;
-      @include display-flex align-items: flex-start;
-      align-content: flex-start;
-      text-align: left;
-      line-height: 1.4rem;
-      padding: 4px 8px;
-      cursor: pointer;
-      @include transition(all .5s ease);
-      @extend %smoothing;
-      @include tablet {
-        padding: 1px 5px;
-        letter-spacing: 1px;
-      };
-      @include mobile {
-        font-size: 20px;
-        padding: 10px 50px;
-        margin: 0 -50px;
-      };
-
-      .itemmarker {
-        @include flex(0 0 15px);
-      }
-
-      .items {
-        @include flex(1 1 80%);
-      }
-
-      .name {
-        font-family: $philly-sans;
-        font-weight: 300;
-        font-size: 14px;
-        color: black;
-        @include mobile {
-          line-height: 1.1;
-          color: black;
-        };
-      }
-
-      .pubdate {
-        font-family: $project-serif;
-        font-weight: 300;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        display: none;
-        @include mobile {
-          display: block;
-        };
-      }
-
-      &:hover {
-        @include transition(all .5s ease);
-        background: #f9f5d8;
-
-        .pubdate {
-          display: block;
-        }
-      }
-    }
-
-    .selected {
-      .name {
-        font-weight: 500;
-        color: black;
-      }
-
-      .itemmarker {
+    .heroText {
+        order: 1;
+        @include flex(1 1 30%);
+        padding: 30px 0 30px 50px;
+        @include display-flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: flex-start;
+        margin-right: -50px;
         position: relative;
+        z-index: 2;
+        @include tablet {
+             @include flex(1 1 40%);
+            padding-top: 20px;
+            margin-right: -50px;
+        };
+        @include mobile {
+             @include flex(1 1 100%);
+            margin: 0;
+            padding: 30px 0 0;
+        };
+    }
+
+    .heroImage {
         width: 100%;
-        height: 15px;
+        margin: 0;
+        padding: 0;
+        order: 2;
+        margin-top: -9%;
+        margin-right: -2.1%;
+        margin-left: auto;
+        @include flex(1 1 50%);
+        @include tablet {
+            min-height: 80vh;
+        };
+        @include mobile {
+             @include flex(1 1 100%);
+            order: 2;
+            margin-top: -10px;
+        };
 
-        &::after {
-          right: 2px;
-          bottom: 0;
-          top: 0;
-          content: "";
-          width: 120%;
-          height: 120%;
-          position: absolute;
-          background-repeat: no-repeat;
-          background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-marker-3.svg");
-
-          background-size: 100% 100%;
-          background-position: center right;
-          background-size: contain;
-           opacity: 0.8;
-
+        img {
+            width: 100%;
+            height: auto;
         }
-      }
     }
 
-    .notready {
-      .name {
-        color: #adadad;
-      }
+    .prehead {
+        display: block;
+        font-weight: 100;
+        font-family: $philly-sans;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        @include mobile {
+            font-size: 22px;
+            letter-spacing: 2px;
+        };
+    }
 
-
-      .pubdate {
-        color: #666;
-
-
-        &::before {
-          content: "COMING ";
-        }
-      }
-
-      &:hover {
-        @include transition(all .5s ease);
-        background: #eee;
+    h1 {
+        font-family: $project-serif;
+        font-weight: 700;
+        font-size: 8vw;
+        line-height: 0.8em;
         color: black;
-        cursor: default;
-      }
+        position: absolute;
+        bottom: 0;
+        width: auto;
+        left: 30px;
+        @include tablet {
+            font-size: 60px;
+            font-size: 8.5vw;
+            bottom: 0;
+        };
+        @include mobile {
+            display: none;
+            left: inherit;
+        };
+        @include BS-large {
+            bottom: 20%;
+        };
+        @include BS-medium {
+            bottom: 10px;
+        };
     }
-  }
 
-  .mobilehead {
-    display: none;
-    @include mobile {
-      padding-left: 20px;
-      display: block;
-      position: relative;
-      bottom: inherit;
-      font-size: 50px;
-      max-width: none;
-      order: 4;
-      font-size: 55px;
-      margin-bottom: 0;
-      padding-top: 20px;
-    };
-  }
+    .heroNav {
+        display: inline-block;
+        // margin: 0 auto;
+        .title {
+            font-family: $project-serif;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 0.8em;
+            color: black;
+            text-align: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            letter-spacing: -.5px;
+            @include flex(0 1 auto);
+            align-self: flex-start;
+            padding-top: 20px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: -20px;
+                right: -20px;
+                border-top: 1px solid #222;
+                bottom: 0;
+            }
+            @include tablet {
+                font-size: 26px;
+                letter-spacing: normal;
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+
+                &::after {
+                    content: "";
+                    left: -5px;
+                    right: -5px;
+                    border-top: 1px solid #222;
+                    bottom: 0;
+                }
+            };
+            @include mobile {
+                font-size: 30px;
+                letter-spacing: normal;
+                margin-bottom: 0;
+                cursor: pointer;
+                padding: 0;
+
+                &::after {
+                    content: "";
+                    left: 50px;
+                    right: 50px;
+                    border-top: 1px solid #222;
+                    bottom: 0;
+                }
+            };
+        }
+        @include mobile {
+            display: block;
+            width: 100%;
+        };
+
+        .parts {
+            @include mobile {
+                opacity: 0;
+                @include transition(all .4s ease);
+                height: auto;
+                position: absolute;
+                display: none;
+                width: 100%;
+                padding: 0 20%;
+                background: rgba(white,0.95);
+            };
+        }
+
+        .dropDown {
+            @include transition(all .4s ease);
+            opacity: 1;
+        }
+
+        .part {
+            font-family: $project-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 40px;
+            @include display-flex align-items: flex-start;
+            align-content: flex-start;
+            text-align: left;
+            line-height: 1.4rem;
+            padding: 4px 8px;
+            cursor: pointer;
+            @include transition(all .5s ease);
+            @extend %smoothing;
+
+
+            @include tablet {
+                padding: 1px 5px;
+                letter-spacing: 1px;
+            };
+            @include mobile {
+                font-size: 20px;
+                padding: 10px 50px;
+                margin: 0 -50px;
+            };
+
+            .itemmarker {
+                @include flex(0 0 15px);
+            }
+
+            .items {
+                @include flex(1 1 80%);
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .name {
+                font-family: $philly-sans;
+                font-weight: 300;
+                font-size: 14px;
+                color: black;
+                @include mobile {
+                    line-height: 1.1;
+                    color: black;
+                };
+            }
+
+            .pubdate {
+                font-family: $project-serif;
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                display: none;
+                @include mobile {
+                    display: block;
+                };
+            }
+
+            &:hover {
+                @include transition(all .5s ease);
+                background: #f9f5d8;
+
+                .pubdate {
+                    display: block;
+                }
+            }
+        }
+
+        .selected {
+            .name {
+                font-weight: 500;
+                color: black;
+            }
+
+            .itemmarker {
+                position: relative;
+                width: 100%;
+                height: 15px;
+
+                &::after {
+                    right: 2px;
+                    bottom: 0;
+                    top: 0;
+                    content: "";
+                    width: 120%;
+                    height: 120%;
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/section-marker-3.svg");
+                    background-size: 100% 100%;
+                    background-position: center right;
+                    background-size: contain;
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .notready {
+            .name {
+                color: #adadad;
+            }
+
+            .pubdate {
+                color: #666;
+
+                &::before {
+                    content: "COMING ";
+                }
+            }
+
+            &:hover {
+                @include transition(all .5s ease);
+                background: #eee;
+                color: black;
+                cursor: default;
+            }
+        }
+    }
+
+    .mobilehead {
+        display: none;
+        @include mobile {
+            padding-left: 20px;
+            display: block;
+            position: relative;
+            bottom: inherit;
+            font-size: 50px;
+            max-width: none;
+            order: 4;
+            font-size: 55px;
+            margin-bottom: 0;
+            padding-top: 20px;
+        };
+    }
 }
 
 .imgDrop {
-  font-family: $philly-serif;
-  font-style: normal;
-  line-height: 1;
-  font-size: 9em;
-  color: transparent;
-  display: block;
-  float: left;
-  margin: 0;
-  background-position: left center;
-  background-size: 80%;
-  background-repeat: no-repeat;
-  padding: 0 50px 50px;
-  margin-top: -8px;
-  text-shadow: none !important;
+    font-family: $philly-serif;
+    font-style: normal;
+    line-height: 1;
+    font-size: 9em;
+    color: transparent;
+    display: block;
+    float: left;
+    margin: 0;
+    background-position: left center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    padding: 0 50px 50px;
+    margin-top: -8px;
+    text-shadow: none !important;
 }
 
 .letterD {
-  background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day1/D.jpg");
-  padding-right: 0;
+    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day1/D.jpg");
+    padding-right: 0;
+}
+
+.letterM {
+    background-image: url("http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/M.jpg");
+    padding-right: 0;
+}
+
+.pbreak {
+    margin-top: 100px;
+    @include mobile {
+        margin-top: 50px;
+    };
 }
 @include keyframes(stickyFade) {
-  0% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
 
-  100% {
-    opacity: 1;
-  }
+    100% {
+        opacity: 1;
+    }
 };
 
 .stickynav {
-  @include transition(all .5s ease);
-  display: none;
-  @include BS-medium {
-    background: rgba(white,0.9);
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px 70px 0 20px;
-    z-index: 100;
-    opacity: 0;
-    @include animation(stickyFade .5s ease forwards);
+    @include transition(all .5s ease);
+    display: none;
+    @include BS-medium {
+        background: rgba(white,0.9);
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px 70px 0 20px;
+        z-index: 100;
+        opacity: 0;
+        @include animation(stickyFade .5s ease forwards);
 
-    .stickyheader {
-      font-family: $project-serif;
-      font-weight: 700;
-      font-size: 30px;
-      line-height: 0.8em;
-      color: black;
-      text-align: left;
-      letter-spacing: -.5px;
-      position: relative;
-      border-bottom: 1px solid black;
-      padding-bottom: 5px;
-      cursor: pointer;
+        .stickyheader {
+            font-family: $project-serif;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 0.8em;
+            color: black;
+            text-align: left;
+            letter-spacing: -.5px;
+            position: relative;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+            cursor: pointer;
 
-      &::after {
-        content: "\f107";
-        font-family: "FontAwesome";
-        font-size: 80%;
-        padding: 3px 3px 3px 5px;
-      }
-    }
-
-    .menu {
-      background: rgba(white,0.9);
-      display: none;
-      opacity: 0;
-      @include transition(all .5s ease);
-      padding-top: 15px;
-      padding-left: 20px;
-      padding-right: 20px;
-      left: 0;
-
-      .name {
-        font-family: $philly-sans;
-        font-weight: 100;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        line-height: normal;
-        @include flex(1 1 100%);
-        @include mobile {
-          font-size: 22px;
-          letter-spacing: 0.5px;
-        };
-      }
-
-      .pubdate {
-        font-family: $project-serif;
-        font-weight: 300;
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-        @include flex(1 1 100%);
-        padding-top: 2px;
-      }
-
-      .part {
-        padding: 8px 10px;
-        margin-left: -10px;
-        margin-right: -10px;
-        cursor: pointer;
-        @include transition(all .5s ease);
-
-        &:hover {
-          @include transition(all .5s ease);
-          background: #f9f5d8;
-        }
-      }
-
-      .notready {
-        color: #666;
-
-        .pubdate {
-          &::before {
-            content: "COMING ";
-          }
+            &::after {
+                content: "\f107";
+                font-family: "FontAwesome";
+                font-size: 80%;
+                padding: 3px 3px 3px 5px;
+            }
         }
 
-        &:hover {
-          background: transparent;
-          color: black;
-          cursor: default;
-        }
-      }
-    }
+        .menu {
+            background: rgba(white,0.9);
+            display: none;
+            opacity: 0;
+            @include transition(all .5s ease);
+            padding-top: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            left: 0;
 
-    .stickyShow {
-      display: block;
-      position: absolute;
-      width: auto;
-      @include transition(all .5s ease);
-    }
-  };
+            .name {
+                font-family: $philly-sans;
+                font-weight: 100;
+                font-size: 14px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                line-height: normal;
+                @include flex(1 1 100%);
+                @include mobile {
+                    font-size: 22px;
+                    letter-spacing: 0.5px;
+                };
+            }
+
+            .pubdate {
+                font-family: $project-serif;
+                font-weight: 300;
+                font-size: 16px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                @include flex(1 1 100%);
+                padding-top: 2px;
+            }
+
+            .part {
+                padding: 8px 10px;
+                margin-left: -10px;
+                margin-right: -10px;
+                cursor: pointer;
+                @include transition(all .5s ease);
+
+                &:hover {
+                    @include transition(all .5s ease);
+                    background: #f9f5d8;
+                }
+            }
+
+            .notready {
+                color: #666;
+                pointer-events: none;
+
+                .pubdate {
+                    &::before {
+                        content: "COMING ";
+                    }
+                }
+
+                &:hover {
+                    background: transparent;
+                    color: black;
+                    cursor: default;
+                }
+            }
+        }
+
+        .stickyShow {
+            display: block;
+            position: absolute;
+            width: auto;
+            @include transition(all .5s ease);
+        }
+    };
 }
 
 .stickyOut {
-  @include animation(stickyFade .5s ease forwards);
-  animation-direction: reverse;
+    @include animation(stickyFade .5s ease forwards);
+    animation-direction: reverse;
 }
 
 .mobilearrow {
-  display: none;
-  @include mobile {
-    display: inline-block;
-    font-size: 80%;
-  };
+    display: none;
+    @include mobile {
+        display: inline-block;
+        font-size: 80%;
+    };
 }
+
 p {
-        text-shadow: -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff, 1px 1px 2px #fff;
+    text-shadow: -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff, 1px 1px 2px #fff;
 }
 
 .container p {
-  a {
-
-      background: #f9f5d8;
-
-    cursor: pointer;
-    color: #000;
-    box-shadow: inset -2px -5px 0 -2px #e8e3be;
-    @include transition(box-shadow 0.3s cubic-bezier(0.86, 0, 0.07, 1));
-  }
+    a {
+        text-shadow: none !important;
+        background: #f9f5d8;
+        padding: 0 3px;
+        margin: 0 -1px;
+        cursor: pointer;
+        color: #000;
+        box-shadow: inset -2px -5px 0 -2px #e8e3be;
+        @include transition(box-shadow 0.3s cubic-bezier(0.86, 0, 0.07, 1));
+    }
 }
 
 .container p {
-  a:hover {
-
-    box-shadow: inset -2px -30px 0 -3px rgba(#e8e3be,0.8);
-    text-decoration: none;
-  }
+    a:hover {
+        box-shadow: inset -2px -30px 0 -3px rgba(#e8e3be,0.8);
+        text-decoration: none;
+    }
 }
 
 .comingtomorrow {
     margin-top: 100px;
     font-style: italic;
+
     .title {
         font-family: $project-serif;
         font-weight: 500;
@@ -767,7 +795,15 @@ p {
         font-size: 22px;
         display: block;
         font-style: normal;
-
     }
+}
 
+.part a {
+    color: inherit !important;
+    &:hover {
+        text-decoration: none !important;
+    }
+    &:focus {
+        text-decoration: none !important;
+    }
 }
