@@ -115,7 +115,7 @@ $(document).ready(function() {
 
         } else if ($(window).scrollTop() >= $(".byline-section").offset().top + $(window).height() / 2 && $(window).scrollTop() < $(".footerNav").offset().top - $(window).height() * 1.5) {
             if ($(".stickynav").length < 1) {
-                $("body").append('<div class="stickynav" id="invnav-rail"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-1.html" data-link-type=“invnav-rail”><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></a></div><div class="part notready"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-2.html" data-link-type=“invnav-rail”><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></a></div><div class="part notready"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-3.html" data-link-type=“invnav-rail”><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></a></div><div class="part notready"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-4.html" data-link-type=“invnav-rail”><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></a></div><div class="part notready"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-5.html" data-link-type=“invnav-rail”><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></a></div></div></div>')
+                $("body").append('<div class="stickynav" id="invnav-rail"><div class="stickyheader">Undercover<br>Gangster</div><div class="menu"><div class="part"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-1.html" data-link-type=“invnav-rail”><div class="name">In Their Fathers’ Footsteps</div><div class="pubdate">Nov. 13</div></a></div><div class="part"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-2.html" data-link-type=“invnav-rail”><div class="name">Portrait of a Suspect</div><div class="pubdate">Nov. 14</div></a></div><div class="part"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-3.html" data-link-type=“invnav-rail”><div class="name">Another Twist, Another Crime</div><div class="pubdate">Nov. 15</div></a></div><div class="part"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-4.html" data-link-type=“invnav-rail”><div class="name">Interrogation</div><div class="pubdate">Nov. 16</div></a></div><div class="part"><a href="http://www.philly.com/philly/news/crime/philly-undercover-gangster-part-5.html" data-link-type=“invnav-rail”><div class="name">The Reckoning</div><div class="pubdate">Nov. 17</div></a></div></div></div>')
             }
             $(".stickynav").hover(
                 function() {
@@ -133,6 +133,20 @@ $(document).ready(function() {
 
                 }
             );
+            // $(".stickynav .part").each(function(){
+            //     var $this = $(this);
+            //
+            //
+            //
+            // })
+            $(".heroNav .part").each(function(){
+                getclass = $(this).attr("class");
+                    if(getclass.includes("notready")){
+                        var getindex = $(this).index()
+                        $(".stickynav .part").eq(getindex).addClass("notready")
+                    }
+            })
+
         } else if ($(window).scrollTop() >= $(".footerNav").offset().top - $(window).height() * 1.5) {
             if ($(".stickynav").length > 0) {
                 setTimeout(function() {
@@ -148,12 +162,12 @@ $(document).ready(function() {
         var $this = $(this);
         if($this.attr("class").includes("notready")) {
             $this.find("a").attr("href","#");
-            console.log($this.find("a").attr("href"))
-
         }
-        $this.find("a").attr("class")
+        // $this.find("a").attr("class")
 
     })
+
+
 });
 
 $(window).resize(function() {
