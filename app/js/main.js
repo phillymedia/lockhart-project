@@ -3,7 +3,7 @@ var AOS = require('aos');
 
 $(document).ready(function() {
 
-  
+
     // if ($(".content").attr("class").includes("is-subscriber")) {
     //     console.log("subscriber")
     //     $(".content").css("padding-top","0")
@@ -38,7 +38,6 @@ $(document).ready(function() {
         easing: "ease",
         once: "true",
         duration: 2000,
-        offset: -50,
         anchor: "center-bottom",
         disable: window.innerWidth < 1000
     });
