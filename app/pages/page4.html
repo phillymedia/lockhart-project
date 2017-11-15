@@ -1,7 +1,3 @@
-{% set page = "page4" %}
-{% set headline = "Interrogation" %}
-{% set subhead = "Day 4" %}
-
 {% extends "pagetemplate.html" %} {% block styles %}
 <!--removeIf(production)-->
 <!--build:css min-files/styles.min.css-->
@@ -11,13 +7,15 @@
 <!--endRemoveIf(production)-->
 {% endblock %}
 
-{% block heroimage %}
-<div id="image-fix">
-<img src="http://media.philly.com/storage/inquirer/special%20project%20media/lockhart/artwork_day4/lockhart_day4_arm.jpg" alt="">
+
+{% block headercontent %}
+
+<div class="headerIntro">
+    <div class="heroImage"><img src="./assets/murray_justice_fpo.jpg" alt=""></div>
 </div>
+<h1>Undercover Gangster Part 4: Interrogation</h1>
+
 {% endblock %}
-
-
 
 {% block bodycontent %}
 {% include "../nj-templates/bodytext/page4.html" %}

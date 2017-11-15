@@ -4,94 +4,8 @@
 @import 'aos.scss';
 $project-serif: 'Teko', $philly-sans;
 
-.subscribe-box {
-    margin: 20px -150px 20px 20px;
-    background-color: #f9f5d8;
-    width: 100%;
-    max-width: 260px;
-    float: right;
-    @include desktop {
-      margin-right: 0 !important;
-    }
-    @include mobile {
-      max-width: 100%;
-    }
-}
-
-.subscribe-box {
-    .title {
-        font-family: $project-serif;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 22px;
-        display: block;
-        font-style: normal;
-        line-height: 0.9;
-        padding-bottom: 10px;
-    }
-}
-
-.subscribe-box div {
-  padding: 20px;
-}
-
-
-
-
-
-.heroText {
-    order: 1;
-    @include flex(1 1 30%);
-    padding: 30px 0 30px 50px;
-    @include display-flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    align-content: flex-start;
-    margin-right: -50px;
-    position: relative;
-    z-index: 2;
-    @include tablet {
-         @include flex(1 1 40%);
-        padding-top: 20px;
-        margin-right: -50px;
-    };
-    @include mobile {
-         @include flex(1 1 100%);
-        margin: 0;
-        padding: 30px 0 0;
-    };
-}
-
-.heroImage {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    order: 2;
-    margin-top: -9%;
-    margin-right: -2.1%;
-    margin-left: auto;
-    @include flex(1 1 50%);
-    @include tablet {
-        min-height: 80vh;
-    };
-    @include mobile {
-         @include flex(1 1 100%);
-        order: 2;
-        margin-top: -10px;
-    };
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-
-
-
 .trigger {
-  height: 0px;
+
   visibility: hidden;
   @include desktop {
     display: none;
@@ -295,7 +209,6 @@ $project-serif: 'Teko', $philly-sans;
 }
 
 .containerQuote {
-    background-color: transparent !important;
     border-top: 5px solid #444;
     border-bottom: none;
     margin-left: -20%;
