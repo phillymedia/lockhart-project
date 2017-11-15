@@ -2,15 +2,29 @@
 
 
 #illustration_1 {
-  width: 30%;
+  max-width: 30%;
+  width: 100%;
 }
 
 #illustration_3 {
-  width: 40%;
+  max-width: 40%;
+  width: 100%;
 }
 
 #illustration_5 {
-  width: 45%;
+  max-width: 45%;
+  width: 100%;
+}
+
+.headerIntro h1 {
+  font-size: 7vw;
+  @include desktop {
+    bottom: -10%;
+  }
+  @include tablet {
+    bottom: 0;
+    font-size: 8vw;
+  }
 }
 
 .heroText {
@@ -69,7 +83,8 @@
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     order: 2;
-    margin-top: -10px
+    margin-top: 5px;
+    min-height: 0;
   }
 }
 
